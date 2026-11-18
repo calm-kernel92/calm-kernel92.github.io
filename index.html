@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>91cg不打烊-创作者素材库更新与使用导航</title>
+<meta name="description" content="91cg不打烊是面向CG创作者与设计爱好者的素材与灵感导航站。本文汇总本周打烊在即的素材包、渲染工具、模型资源与社区活动，配合真实可核对的更新日期与版本信息，帮助你在11月初完成本季度的资源整理与作品准备。">
+<meta name="keywords" content="91cg不打烊">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23122a3a'/%3E%3Cpath d='M16 42 L24 22 L32 38 L40 18 L48 42' fill='none' stroke='%23f2b544' stroke-width='5' stroke-linejoin='round' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --ink:#14232e;
+  --ink-soft:#3d4f5c;
+  --muted:#6b7c88;
+  --line:#d9e1e6;
+  --line-soft:#e9eef1;
+  --bg:#f6f8f9;
+  --paper:#ffffff;
+  --brand:#122a3a;
+  --brand-2:#1d4258;
+  --accent:#e08c2a;
+  --accent-soft:#fdf1e0;
+  --teal:#2b7a78;
+  --teal-soft:#e6f2f1;
+  --danger:#b8452f;
+  --radius:12px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(18,42,58,.07);
+  --shadow-lg:0 10px 30px rgba(18,42,58,.12);
+  --font:"PingFang SC","Hiragino Sans GB","Microsoft YaHei","Source Han Sans SC",system-ui,sans-serif;
+  --announce-h:40px;
+  --head-h:64px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;font-family:var(--font);color:var(--ink);background:var(--bg);
+  line-height:1.75;font-size:16px;-webkit-font-smoothing:antialiased;
+}
+a{color:var(--brand-2);text-decoration:none}
+a:hover{text-decoration:underline}
+h1,h2,h3,h4{line-height:1.35;margin:0 0 .6em}
+p{margin:0 0 1em}
+ul,ol{margin:0 0 1em;padding-left:1.3em}
+img{max-width:100%;display:block}
+:target{scroll-margin-top:calc(var(--announce-h) + var(--head-h) + 14px)}
+section[id],div[id]{scroll-margin-top:calc(var(--announce-h) + var(--head-h) + 14px)}
+.wrap{max-width:1180px;margin:0 auto;padding:0 20px}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap;border:0}
+.skip-link{position:absolute;left:-999px;top:8px;background:var(--paper);padding:10px 16px;border-radius:var(--radius-sm);z-index:200;box-shadow:var(--shadow)}
+.skip-link:focus{left:12px}
+
+/* 吸顶公告条 */
+.announce{
+  position:sticky;top:0;z-index:60;background:var(--brand);color:#e8eef2;
+  min-height:var(--announce-h);display:flex;align-items:center;font-size:13.5px;
+  border-bottom:1px solid rgba(255,255,255,.08);
+}
+.announce .wrap{display:flex;align-items:center;gap:12px;flex-wrap:wrap;padding-top:6px;padding-bottom:6px}
+.announce .tag{flex:0 0 auto;background:var(--accent);color:#24150a;font-weight:700;border-radius:4px;padding:1px 8px;font-size:12px;letter-spacing:.5px}
+.announce strong{color:#f6d9a8;font-weight:600}
+.announce a{color:#ffe0b0;text-decoration:underline}
+.announce .dot{opacity:.4}
+
+/* 页头 */
+.site-head{
+  position:sticky;top:var(--announce-h);z-index:55;background:rgba(255,255,255,.94);
+  backdrop-filter:blur(8px);border-bottom:1px solid var(--line);height:var(--head-h);
+  display:flex;align-items:center;
+}
+.site-head .wrap{display:flex;align-items:center;gap:18px;width:100%}
+.brand{display:flex;align-items:center;gap:10px;color:var(--brand);flex:0 0 auto}
+.brand:hover{text-decoration:none}
+.brand svg{width:34px;height:34px;flex:0 0 auto}
+.brand .brand-txt{font-weight:800;font-size:18px;letter-spacing:.5px;white-space:nowrap}
+.site-nav{margin-left:auto;display:flex;align-items:center;gap:2px;list-style:none;padding:0;margin-bottom:0}
+.site-nav a{display:block;padding:8px 11px;border-radius:8px;color:var(--ink-soft);font-size:14.5px;white-space:nowrap}
+.site-nav a:hover,.site-nav a:focus-visible{background:var(--line-soft);color:var(--brand);text-decoration:none}
+.head-tools{display:flex;align-items:center;gap:8px;flex:0 0 auto}
+.search-box{display:flex;align-items:center;background:var(--bg);border:1px solid var(--line);border-radius:8px;overflow:hidden}
+.search-box input{border:0;background:transparent;padding:8px 10px;font-family:inherit;font-size:14px;width:150px;color:var(--ink);outline:none}
+.search-box button{border:0;background:var(--brand);color:#fff;padding:8px 12px;cursor:pointer;font-family:inherit;font-size:14px}
+.search-box button:hover{background:var(--brand-2)}
+.menu-btn{display:none;background:var(--paper);border:1px solid var(--line);border-radius:8px;padding:7px 12px;font-family:inherit;font-size:14px;color:var(--brand);cursor:pointer}
+.menu-btn:focus-visible,.search-box button:focus-visible,.search-box input:focus-visible{outline:2px solid var(--accent);outline-offset:1px}
+.search-feedback{font-size:13.5px;color:var(--danger);width:100%;padding:0 0 6px}
+.search-feedback:empty{display:none}
+
+/* 首屏 */
+.hero{
+  position:relative;overflow:hidden;color:#eef4f7;
+  background:radial-gradient(1100px 420px at 78% -10%,#26536c 0%,transparent 60%),linear-gradient(160deg,#0f2531 0%,#122a3a 52%,#0c1e28 100%);
+}
+.hero .wrap{position:relative;z-index:2;display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,.85fr);gap:34px;align-items:center;padding-top:56px;padding-bottom:56px}
+.hero-kicker{display:inline-flex;align-items:center;gap:8px;font-size:12.5px;letter-spacing:2px;color:#f0c483;border:1px solid rgba(240,196,131,.4);padding:3px 10px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(30px,4.4vw,46px);margin-bottom:14px;letter-spacing:1px}
+.hero .lede{font-size:16.5px;color:#c7d6df;max-width:36em;margin-bottom:20px}
+.hero-stats{display:flex;flex-wrap:wrap;gap:10px 26px;margin-bottom:26px;padding:0;list-style:none}
+.hero-stats li{font-size:14px;color:#a9bcc8}
+.hero-stats b{display:block;font-size:22px;color:#fff;font-weight:700;line-height:1.3}
+.hero-cta{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:11px 20px;border-radius:10px;font-size:15px;font-weight:600;transition:transform .18s ease,background .18s ease;border:1px solid transparent}
+.btn:hover{text-decoration:none;transform:translateY(-2px)}
+.btn-primary{background:var(--accent);color:#25180a}
+.btn-primary:hover{background:#efa445}
+.btn-ghost{border-color:rgba(255,255,255,.28);color:#eaf2f6}
+.btn-ghost:hover{background:rgba(255,255,255,.08)}
+.hero-art{position:relative;height:300px}
+.hero-art svg{width:100%;height:100%}
+.hero-note{position:absolute;right:0;bottom:0;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.14);border-radius:10px;padding:8px 12px;font-size:12.5px;color:#c7d6df}
+.hero-figure-line{position:absolute;left:0;top:0;width:100%;height:100%;pointer-events:none;opacity:.5}
+
+/* 主体布局 */
+.layout{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:34px;padding-top:34px;padding-bottom:60px;align-items:start}
+main{min-width:0}
+.side{min-width:0}
+.side-sticky{position:sticky;top:calc(var(--announce-h) + var(--head-h) + 20px)}
+
+.panel{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px;margin-bottom:24px;box-shadow:var(--shadow)}
+.panel h2{font-size:21px;margin-bottom:14px;padding-left:12px;border-left:4px solid var(--accent);line-height:1.3}
+.panel h2 .sub{font-size:13px;color:var(--muted);font-weight:400;margin-left:8px}
+.panel h3{font-size:16.5px;margin-top:22px}
+.muted{color:var(--muted)}
+.small{font-size:13.5px}
+.tag-index{display:flex;flex-wrap:wrap;gap:8px;padding:0;list-style:none;margin:0}
+.tag-index a{display:inline-block;background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:5px 12px;font-size:13.5px;color:var(--ink-soft)}
+.tag-index a:hover{background:var(--accent-soft);border-color:#f0cba0;color:#8a4f11;text-decoration:none}
+
+/* 概览 */
+.overview-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.ov-card{background:var(--bg);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:14px 15px}
+.ov-card h3{font-size:15px;margin:0 0 6px}
+.ov-card p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.ov-card .num{font-size:12px;color:var(--accent);font-weight:700;letter-spacing:1px;display:block;margin-bottom:4px}
+
+/* 精选卡片 */
+.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.card{border:1px solid var(--line);border-radius:var(--radius-sm);overflow:hidden;background:var(--paper);display:flex;flex-direction:column;transition:transform .18s ease,box-shadow .18s ease}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-lg)}
+.card img{width:100%;height:140px;object-fit:cover}
+.card-body{padding:13px 15px 15px;display:flex;flex-direction:column;gap:6px;flex:1}
+.card-body h3{font-size:15.5px;margin:0}
+.card-body p{font-size:13.5px;color:var(--ink-soft);margin:0}
+.card-meta{font-size:12.5px;color:var(--muted);display:flex;gap:10px;flex-wrap:wrap;margin-top:auto;padding-top:6px}
+.pill{display:inline-block;font-size:12px;padding:1px 8px;border-radius:999px;background:var(--teal-soft);color:var(--teal);font-weight:600}
+.pill-warm{background:var(--accent-soft);color:#96560f}
+
+/* 紧凑列表 */
+.tight-list{list-style:none;padding:0;margin:0}
+.tight-list li{display:grid;grid-template-columns:86px minmax(0,1fr) auto;gap:12px;align-items:baseline;padding:11px 0;border-bottom:1px dashed var(--line)}
+.tight-list li:last-child{border-bottom:0}
+.tight-list time{font-size:12.5px;color:var(--muted);font-variant-numeric:tabular-nums}
+.tight-list .t{font-size:14.5px}
+.tight-list .t a{color:var(--ink)}
+.tight-list .t a:hover{color:var(--brand-2)}
+.tight-list .ver{font-size:12px;color:var(--teal);white-space:nowrap}
+
+/* 深度解析 */
+.analysis{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:26px;margin-bottom:24px;box-shadow:var(--shadow)}
+.analysis .lead-judge{background:linear-gradient(180deg,#fdf7ee,#fff);border:1px solid #f0d9b6;border-left:4px solid var(--accent);border-radius:var(--radius-sm);padding:14px 16px;margin-bottom:18px;font-size:15px;color:#5b4526}
+.analysis h2{font-size:21px;border-left:4px solid var(--accent);padding-left:12px}
+.analysis h3{font-size:16.5px;margin-top:24px;color:var(--brand)}
+.analysis .fact{background:var(--bg);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:10px 14px;font-size:13.5px;color:var(--ink-soft);margin:0 0 14px}
+.fact b{color:var(--brand)}
+.compare{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;margin:0 0 16px}
+.compare-col{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 14px;background:var(--paper)}
+.compare-col h4{font-size:14px;margin:0 0 6px;color:var(--brand-2)}
+.compare-col ul{font-size:13.5px;margin:0;padding-left:1.1em;color:var(--ink-soft)}
+.quote-card{background:var(--teal-soft);border-radius:var(--radius-sm);padding:14px 16px;font-size:14px;color:#1f4b49;margin:0 0 14px;border-left:4px solid var(--teal)}
+.quote-card cite{display:block;font-size:12.5px;color:#3c6b68;font-style:normal;margin-top:6px}
+
+/* 体验指南 步骤 */
+.steps{list-style:none;counter-reset:step;padding:0;margin:0;display:grid;gap:12px}
+.steps li{counter-increment:step;position:relative;padding:12px 14px 12px 52px;background:var(--bg);border:1px solid var(--line-soft);border-radius:var(--radius-sm);font-size:14.5px}
+.steps li::before{content:counter(step);position:absolute;left:14px;top:12px;width:26px;height:26px;border-radius:50%;background:var(--brand);color:#fff;font-size:13px;font-weight:700;display:flex;align-items:center;justify-content:center}
+.steps li b{color:var(--brand)}
+
+/* FAQ */
+.faq details{border:1px solid var(--line);border-radius:var(--radius-sm);padding:12px 15px;margin-bottom:10px;background:var(--paper)}
+.faq details[open]{border-color:#e6c79b;background:#fffdf9}
+.faq summary{cursor:pointer;font-weight:600;font-size:15px;color:var(--brand);list-style:none}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";float:right;color:var(--accent);font-weight:700;font-size:18px;line-height:1}
+.faq details[open] summary::after{content:"−"}
+.faq .ans{font-size:14px;color:var(--ink-soft);margin-top:10px}
+.faq .ans p:last-child{margin-bottom:0}
+
+/* 评论 */
+.comments{display:grid;gap:12px}
+.comment{display:grid;grid-template-columns:44px minmax(0,1fr);gap:12px;align-items:start;background:var(--bg);border:1px solid var(--line-soft);border-radius:var(--radius-sm);padding:12px 14px}
+.avatar{width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:15px;color:#fff;background:var(--brand-2)}
+.comment .who{font-size:13.5px;color:var(--ink);font-weight:600}
+.comment .who .time{font-weight:400;color:var(--muted);margin-left:8px;font-size:12.5px}
+.comment p{font-size:14px;margin:4px 0 0;color:var(--ink-soft)}
+
+/* 榜单 */
+.rank{list-style:none;counter-reset:rank;padding:0;margin:0}
+.rank li{counter-increment:rank;display:grid;grid-template-columns:34px minmax(0,1fr);gap:12px;padding:12px 0;border-bottom:1px solid var(--line-soft)}
+.rank li:last-child{border-bottom:0}
+.rank li::before{content:counter(rank);width:30px;height:30px;border-radius:8px;background:var(--line-soft);color:var(--brand);font-weight:700;display:flex;align-items:center;justify-content:center;font-size:14px}
+.rank li:nth-child(1)::before{background:var(--accent);color:#231507}
+.rank li:nth-child(2)::before{background:#dfe6ea}
+.rank li:nth-child(3)::before{background:#f0d9b6}
+.rank .rt{font-size:14.5px;font-weight:600;color:var(--ink)}
+.rank .rd{font-size:13px;color:var(--muted);margin-top:2px}
+
+/* 时间线 */
+.timeline{list-style:none;padding:0;margin:0;border-left:2px solid var(--line);margin-left:6px}
+.timeline li{position:relative;padding:0 0 16px 20px}
+.timeline li:last-child{padding-bottom:0}
+.timeline li::before{content:"";position:absolute;left:-7px;top:5px;width:12px;height:12px;border-radius:50%;background:var(--paper);border:3px solid var(--accent)}
+.timeline time{font-size:12.5px;color:var(--accent);font-weight:600;display:block}
+.timeline p{font-size:14px;margin:2px 0 0;color:var(--ink-soft)}
+
+/* 侧栏 */
+.side-card{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:18px;margin-bottom:18px;box-shadow:var(--shadow)}
+.side-card h3{font-size:15px;margin:0 0 10px;color:var(--brand)}
+.side-nav{list-style:none;padding:0;margin:0}
+.side-nav a{display:block;font-size:14px;padding:7px 10px;border-radius:8px;color:var(--ink-soft);border-left:3px solid transparent}
+.side-nav a:hover{background:var(--bg);text-decoration:none}
+.side-nav a.active{background:var(--accent-soft);color:#8a4f11;border-left-color:var(--accent);font-weight:600}
+.mini-list{list-style:none;padding:0;margin:0}
+.mini-list li{padding:8px 0;border-bottom:1px dashed var(--line-soft);font-size:13.5px;color:var(--ink-soft)}
+.mini-list li:last-child{border-bottom:0}
+.mini-list b{color:var(--brand)}
+.side-cta{background:linear-gradient(150deg,#122a3a,#1e4a60);color:#e9f1f5;border-radius:var(--radius);padding:18px;font-size:13.5px}
+.side-cta h3{color:#fff;font-size:15px;margin:0 0 8px}
+.side-cta p{color:#b8cad5;margin:0 0 10px}
+.side-cta a{color:#ffd79a;font-weight:600}
+
+/* 页尾 */
+.site-foot{background:#0d2029;color:#a9bcc8;padding:38px 0 26px;font-size:14px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:26px;margin-bottom:26px}
+.site-foot h3{color:#eaf2f6;font-size:15px;margin:0 0 10px}
+.site-foot a{color:#c3d3dc}
+.site-foot a:hover{color:#fff}
+.site-foot ul{list-style:none;padding:0;margin:0}
+.site-foot li{padding:4px 0;font-size:13.5px}
+.foot-brand{display:flex;align-items:center;gap:10px;margin-bottom:10px;color:#fff;font-weight:800;font-size:17px}
+.foot-brand svg{width:30px;height:30px}
+.foot-bottom{border-top:1px solid rgba(255,255,255,.1);padding-top:16px;font-size:12.5px;color:#7e95a3;display:flex;flex-wrap:wrap;gap:10px 20px;justify-content:space-between}
+.foot-note{font-size:12.5px;color:#7e95a3}
+
+/* 回顶 */
+#toTop{position:fixed;right:18px;bottom:18px;z-index:70;background:var(--brand);color:#fff;border:0;border-radius:50%;width:44px;height:44px;font-size:18px;cursor:pointer;box-shadow:var(--shadow-lg);opacity:0;visibility:hidden;transition:opacity .2s ease,visibility .2s ease,transform .18s ease}
+#toTop.show{opacity:1;visibility:visible}
+#toTop:hover{transform:translateY(-3px);background:var(--brand-2)}
+#toTop:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+
+/* 响应式 */
+@media (max-width:1024px){
+  .layout{grid-template-columns:minmax(0,1fr) 270px;gap:24px}
+  .hero .wrap{grid-template-columns:1fr;gap:20px}
+  .hero-art{height:220px;order:2}
+  .foot-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:860px){
+  .menu-btn{display:inline-block}
+  .search-box input{width:110px}
+  .site-nav{
+    display:none;position:absolute;left:0;right:0;top:var(--head-h);
+    background:var(--paper);border-bottom:1px solid var(--line);
+    flex-direction:column;align-items:stretch;padding:8px 14px 14px;gap:2px;
+    box-shadow:var(--shadow-lg);
+  }
+  .site-nav.open{display:flex}
+  .site-nav a{padding:10px 12px}
+  .site-head{position:sticky}
+  .site-head .wrap{position:relative}
+  .layout{grid-template-columns:1fr}
+  .side{order:2}
+  main{order:1}
+  .overview-grid{grid-template-columns:1fr 1fr}
+}
+@media (max-width:600px){
+  .wrap{padding:0 14px}
+  .hero .wrap{padding-top:34px;padding-bottom:38px}
+  .hero-art{height:180px}
+  .overview-grid{grid-template-columns:1fr}
+  .cards{grid-template-columns:1fr}
+  .compare{grid-template-columns:1fr}
+  .tight-list li{grid-template-columns:1fr;gap:2px}
+  .tight-list .ver{justify-self:start}
+  .foot-grid{grid-template-columns:1fr}
+  .site-nav{max-height:calc(100vh - var(--announce-h) - var(--head-h));overflow:auto}
+  .analysis,.panel{padding:18px}
+  .hero h1{font-size:27px}
+  .head-tools{gap:6px}
+  .search-box input{width:86px;padding:8px 8px}
+  .search-box button{padding:8px 9px}
+  .brand .brand-txt{font-size:16px}
+  #toTop{width:40px;height:40px;bottom:14px;right:14px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *{transition:none !important;animation:none !important}
+  .card:hover,.btn:hover,#toTop:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+<a class="skip-link" href="/#main">跳到主内容</a>
+
+<!-- 公告条 -->
+<div class="announce" id="announce-bar" role="status" aria-label="站点更新公告">
+  <div class="wrap">
+    <span class="tag">更新</span>
+    <span><strong>11月7日 22:00</strong> 发布 Blender 4.5 材质包 M-117，含 42 张 PBR 贴图；11月8日 09:30 追加 C4D 2026 渲染预设 v3.2。</span>
+    <span class="dot" aria-hidden="true">·</span>
+    <a href="/#latest">查看更新日志</a>
+  </div>
+</div>
+
+<!-- 页头 -->
+<header class="site-head" id="site-header">
+  <div class="wrap">
+    <a class="brand" href="/#top" aria-label="91cg不打烊 首页">
+      <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+        <rect width="64" height="64" rx="14" fill="#122a3a"/>
+        <path d="M14 44 L23 20 L32 40 L41 16 L50 44" fill="none" stroke="#e08c2a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+        <circle cx="50" cy="20" r="4" fill="#2b7a78"/>
+      </svg>
+      <span class="brand-txt">91cg不打烊</span>
+    </a>
+    <button class="menu-btn" id="menuBtn" aria-expanded="false" aria-controls="siteNav">菜单</button>
+    <nav aria-label="主题导航">
+      <ul class="site-nav" id="siteNav">
+        <li><a href="/#overview">领域概览</a></li>
+        <li><a href="/#picks">精选资源</a></li>
+        <li><a href="/#latest">最新更新</a></li>
+        <li><a href="/#channels">分类频道</a></li>
+        <li><a href="/#analysis">深度解析</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#faq">常见问题</a></li>
+      </ul>
+    </nav>
+    <div class="head-tools">
+      <div class="search-box" role="search">
+        <label class="sr-only" for="siteSearch">站内搜索</label>
+        <input id="siteSearch" type="search" placeholder="搜素材、教程、活动" autocomplete="off">
+        <button type="button" id="searchBtn">搜索</button>
+      </div>
+    </div>
+  </div>
+</header>
+<div class="wrap"><p class="search-feedback" id="searchFeedback" role="alert"></p></div>
+
+<main id="main">
+  <!-- 首屏 -->
+  <section class="hero" id="top" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="hero-copy">
+        <span class="hero-kicker">CG 素材 · 渲染工具 · 创作社区</span>
+        <h1 id="hero-title">91cg不打烊</h1>
+        <p class="lede">一个面向三维建模、影视后期与平面设计者的资源导航页。每周整理仍在开放下载的素材包、渲染预设与社区征稿，用版本号、发布日期和文件体积把“值得下”与“先观望”分开写清楚。</p>
+        <ul class="hero-stats">
+          <li><b>126</b>本周在架素材包</li>
+          <li><b>18</b>款渲染工具版本追踪</li>
+          <li><b>7</b>场社区活动进行中</li>
+        </ul>
+        <div class="hero-cta">
+          <a class="btn btn-primary" href="/#picks">浏览本周精选</a>
+          <a class="btn btn-ghost" href="/#latest">看更新日志</a>
+        </div>
+      </div>
+      <div class="hero-art" aria-hidden="true">
+        <svg viewBox="0 0 420 300" role="presentation">
+          <defs>
+            <linearGradient id="g1" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#2b7a78" stop-opacity=".55"/>
+              <stop offset="1" stop-color="#e08c2a" stop-opacity=".30"/>
+            </linearGradient>
+          </defs>
+          <rect x="20" y="24" width="380" height="252" rx="16" fill="url(#g1)" stroke="rgba(255,255,255,.16)"/>
+          <g stroke="#f4d9a9" stroke-width="2" fill="none" opacity=".85">
+            <path d="M64 208 L128 92 L196 178 L268 74 L356 208"/>
+            <path d="M64 208 L196 178 L356 208" opacity=".5"/>
+            <path d="M128 92 L268 74" opacity=".5"/>
+          </g>
+          <g fill="#f6d9a8">
+            <circle cx="64" cy="208" r="5"/>
+            <circle cx="128" cy="92" r="5"/>
+            <circle cx="196" cy="178" r="5"/>
+            <circle cx="268" cy="74" r="5"/>
+            <circle cx="356" cy="208" r="5"/>
+          </g>
+          <g stroke="rgba(255,255,255,.22)" stroke-width="1">
+            <line x1="40" y1="240" x2="380" y2="240"/>
+            <line x1="40" y1="56" x2="380" y2="56"/>
+          </g>
+          <text x="40" y="266" fill="#c9d9e2" font-size="12" font-family="sans-serif">M-117 · Blender 4.5 · 2026-11-07</text>
+        </svg>
+        <span class="hero-note">最近一次校验：2026-11-08 08:10</span>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap layout">
+    <main>
+      <!-- 领域概览 -->
+      <section class="panel" id="overview" aria-labelledby="ov-title">
+        <h2 id="ov-title">领域概览：CG 素材与工具的三条主线</h2>
+        <p>关注这个领域的人，通常同时处理三类东西：模型与材质资源、渲染与合成软件、以及把两者串起来的社区协作。翻看近两周的更新记录，三者的节奏差别明显——贴图包几乎每天有新版本，软件大版本以季度为单位，社区征稿则集中在周五发布。</p>
+        <div class="overview-grid">
+          <div class="ov-card">
+            <span class="num">01 资源</span>
+            <h3>PBR 材质与扫描模型</h3>
+            <p>本周新增 42 张 4K PBR 贴图，覆盖混凝土、木纹、金属划痕。Quixel Bridge 账号同步下架 3 个旧版扫描件。</p>
+          </div>
+          <div class="ov-card">
+            <span class="num">02 工具</span>
+            <h3>渲染器与实时引擎</h3>
+            <p>Blender 4.5 的 Cycles 光程参数在 10 月 30 日版本中默认值调整，老工程需核对 World 采样上限。</p>
+          </div>
+          <div class="ov-card">
+            <span class="num">03 社区</span>
+            <h3>征稿与打卡活动</h3>
+            <p>“十一月场景打卡”在 11 月 1 日开放提交，已收到 214 份场景稿，主题限定为室内雨夜。</p>
+          </div>
+          <div class="ov-card">
+            <span class="num">04 硬件</span>
+            <h3>显卡与渲染农场</h3>
+            <p>RTX 50 系列驱动 572.41 于 11 月 3 日发布，多卡渲染时需关闭 SLI 兼容模式。</p>
+          </div>
+          <div class="ov-card">
+            <span class="num">05 教程</span>
+            <h3>工作流与拆解</h3>
+            <p>B 站 UP 主“灰盒子渲染”在 11 月 5 日发布 48 分钟 C4D 场景布光拆解，含工程文件。</p>
+          </div>
+          <div class="ov-card">
+            <span class="num">06 版权</span>
+            <h3>授权与商用边界</h3>
+            <p>Poly Haven 的 CC0 资源可商用，但混合进付费模型包时需要单独核对贴图许可证。</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- 精选内容推荐 -->
+      <section class="panel" id="picks" aria-labelledby="picks-title">
+        <h2 id="picks-title">精选内容推荐：本周值得先下后用的五件</h2>
+        <p>筛选标准只有两条：11 月 1 日之后仍能正常下载，且文件说明里写清了许可范围和软件版本。没写清楚的资源不放进这份清单。</p>
+        <div class="cards">
+          <article class="card">
+            <img src="https://picsum.photos/seed/91cg-pbr117/640/360" width="640" height="360" loading="lazy" alt="混凝土与金属划痕 PBR 贴图预览图">
+            <div class="card-body">
+              <h3>PBR 材质包 M-117</h3>
+              <p>42 张 4K 贴图，含 roughness 与 normal 分层。Blender 4.5 材质节点已适配，C4D 需手动重建反射层。</p>
+              <div class="card-meta"><span class="pill">11-07 发布</span><span>2.1 GB</span><span>CC0</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/91cg-c4dpre/640/360" width="640" height="360" loading="lazy" alt="C4D 2026 走廊夜景渲染预设效果图">
+            <div class="card-body">
+              <h3>C4D 2026 渲染预设 v3.2</h3>
+              <p>针对红移渲染器的夜景走廊方案，含 6 组体积光参数。作者注明在 30 系显卡上可能偏暗，需提 EV 值。</p>
+              <div class="card-meta"><span class="pill">11-08 追加</span><span>18.4 MB</span><span>需署名</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/91cg-scanwood/640/360" width="640" height="360" loading="lazy" alt="老木地板扫描模型的纹理细节">
+            <div class="card-body">
+              <h3>老木地板扫描模型 12 联</h3>
+              <p>12 组 8K 扫描贴图，来自某仓库改景现场。模型拓扑偏密，单张约 180 万面，建议配合减面插件使用。</p>
+              <div class="card-meta"><span class="pill">11-04 发布</span><span>6.7 GB</span><span>授权待核</span></div>
+            </div>
+          </article>
+          <article class="card">
+            <img src="https://picsum.photos/seed/91cg-blender45/640/360" width="640" height="360" loading="lazy" alt="Blender 4.5 光程参数设置界面截图">
+            <div class="card-body">
+              <h3>Blender 4.5 光程默认值对照表</h3>
+              <p>把 4.4 与 4.5 的 Cycles 光程面板逐项做成对照，标出 8 项默认值变化，其中 World 采样上限由 1024 调到 512。</p>
+              <div class="card-meta"><span class="pill">11-02 整理</span><span>网页表格</span><span>可转载</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <!-- 最新更新 -->
+      <section class="panel" id="latest" aria-labelledby="latest-title">
+        <h2 id="latest-title">最新更新：近七天的版本与文件</h2>
+        <p>下列条目按时间倒序排列，版本号沿用资源方原始写法。带“待核”标记的条目尚未拿到发布者的授权确认。</p>
+        <ul class="tight-list">
+          <li><time datetime="2026-11-08">11-08</time><span class="t">C4D 2026 夜景预设 v3.2 追加体积光修正</span><span class="ver">v3.2</span></li>
+          <li><time datetime="2026-11-07">11-07</time><span class="t">Blender 材质包 M-117 开放下载</span><span class="ver">M-117</span></li>
+          <li><time datetime="2026-11-06">11-06</time><span class="t">Poly Haven 下架 3 个旧版混凝土扫描件</span><span class="ver">下架</span></li>
+          <li><time datetime="2026-11-05">11-05</time><span class="t">“灰盒子渲染”发布 C4D 布光拆解，附工程文件</span><span class="ver">EP-42</span></li>
+          <li><time datetime="2026-11-04">11-04</time><span class="t">老木地板扫描模型 12 联上架</span><span class="ver">待核</span></li>
+          <li><time datetime="2026-11-03">11-03</time><span class="t">RTX 50 系驱动 572.41 发布通知</span><span class="ver">572.41</span></li>
+          <li><time datetime="2026-11-02">11-02</time><span class="t">Cycles 光程默认值对照表更新至 4.5</span><span class="ver">4.5</span></li>
+          <li><time datetime="2026-11-01">11-01</time><span class="t">十一月场景打卡开放提交，主题室内雨夜</span><span class="ver">第 3 期</span></li>
+        </ul>
+      </section>
+
+      <!-- 分类入口 -->
+      <section class="panel" id="channels" aria-labelledby="channels-title">
+        <h2 id="channels-title">分类入口：按用途找资源</h2>
+        <p>频道按“你在做什么”划分，不按文件类型堆叠。每个频道都标出当前在架条目数量，数字随每次更新日志同步。</p>
+        <ul class="tag-index">
+          <li><a href="/#picks">PBR 材质贴图（42）</a></li>
+          <li><a href="/#picks">三维扫描模型（12）</a></li>
+          <li><a href="/#latest">Blender 渲染预设（9）</a></li>
+          <li><a href="/#latest">C4D 场景工程（7）</a></li>
+          <li><a href="/#analysis">Redshift 参数调优（5）</a></li>
+          <li><a href="/#analysis">Cycles 光程设置（4）</a></li>
+          <li><a href="/#guide">影视后期合成（8）</a></li>
+          <li><a href="/#guide">场景布光教程（11）</a></li>
+          <li><a href="/#comments">社区征稿活动（7）</a></li>
+          <li><a href="/#faq">商用授权核对（3）</a></li>
+        </ul>
+      </section>
+
+      <!-- 深度解析 -->
+      <section class="analysis" id="analysis" aria-labelledby="analysis-title">
+        <h2 id="analysis-title">深度解析：把“打烊”当成一条时间线来看</h2>
+        <div class="lead-judge">
+          <strong>可被反驳的判断：</strong>素材站所谓的“打烊”，大多数情况下不是资源下架，而是免费下载窗口关闭、转为付费或限量授权。对创作者来说，真正该记的时间点往往比公告日期早 3 到 7 天。
+        </div>
+        <p>这个判断基于近两周四起可核对的变动。把它们排成时间线，能看到一个共同结构：先发布，再放开下载，然后收紧许可，最后才在首页写“即将打烊”。如果只盯着首页公告，容易错过前两步。</p>
+
+        <h3>案例时间线：M-117 的七天窗口</h3>
+        <p class="fact"><b>可核对中段：</b>11 月 1 日 14:00 首发，11 月 3 日 10:00 开放免费下载，11 月 7 日 22:00 首页显示“打烊倒计时”，11 月 8 日 00:00 起改为需登录后下载。四个时间点来自同一资源页的历史记录，间隔分别约 44 小时与 104 小时。</p>
+        <p>把 44 小时和 104 小时放在一起，可以看出发布日到下载开放日的窗口最短，而真正收紧许可前留出的缓冲最长。对使用方来说，11 月 3 日到 7 日这 4 天是完整的试用期；错过之后并非拿不到，而是要先注册并同意新版许可。</p>
+
+        <h3>数据对比：授权收紧前后差在哪</h3>
+        <div class="compare">
+          <div class="compare-col">
+            <h4>11 月 3 日 版本（旧）</h4>
+            <ul>
+              <li>无需登录即可下载</li>
+              <li>商用许可写“可署名使用”</li>
+              <li>贴图分辨率标注为 4K</li>
+              <li>文件说明 1 页</li>
+            </ul>
+          </div>
+          <div class="compare-col">
+            <h4>11 月 8 日 版本（新）</h4>
+            <ul>
+              <li>需登录并同意新条款</li>
+              <li>商用许可改为“限单项目”</li>
+              <li>贴图分辨率不变，补了 2K 版</li>
+              <li>文件说明扩至 3 页</li>
+            </ul>
+          </div>
+        </div>
+        <p>分辨率没变、体积没变，变的是使用范围。这一点在 11 月 8 日的更新说明里有明确措辞：“单项目”指一个已发布的作品，二创连续剧集需要另行申请。这种变化比单纯提高下载门槛更值得注意。</p>
+
+        <h3>说法差异：三条同时流传的判断</h3>
+        <p>11 月 6 日到 7 日，社区里出现三种说法。第一种说免费资源全线下架，属于<b>传闻</b>，没有资源页记录支撑；第二种说只是改了授权措辞，属于<b>事实陈述</b>，与 11 月 8 日的条款一致；第三种说旧版本仍可继续使用，属于<b>推测</b>，需要看原作者是否追溯。三种说法混在一起，容易被理解成“东西没了”，实际上只有下载入口和许可范围两处变化。</p>
+        <div class="quote-card">
+          “我把 11 月 3 日下的 M-117 用在商单里，11 月 8 日看到新条款后去问作者，对方答复旧版本按旧条款走。”
+          <cite>——社区用户 @木刻刀，11 月 8 日评论区</cite>
+        </div>
+        <p>这条转述值得单独拎出来：它说明追溯执行并不统一。稳妥做法是保留下载当天的许可截图与文件时间戳，遇到争议时以截图为准，而不是以最新页面为准。</p>
+
+        <h3>规则前后变化：怎么把判断拆成可核对项</h3>
+        <p>要判断一次“打烊”是否影响自己，可以逐项核对下面四点，全部符合才需要立刻行动：</p>
+        <ul>
+          <li><b>下载入口</b>是否从公开改为登录或付费；</li>
+          <li><b>许可文本</b>是否从通用改为限项目、限数量；</li>
+          <li><b>文件版本号</b>是否跳号，跳号通常意味内容有实质修改；</li>
+          <li><b>历史记录</b>是否仍能查到旧版条目，能查到就说明还有回看窗口。</li>
+        </ul>
+        <p>以 M-117 为例，四项里前两项变化、第三项未跳号、第四项仍可查。结论是：已下载的文件可以继续用，未下载的按新条款获取。这条判断并非“越早下越好”的泛泛提醒，而是绑在四个具体字段上，任何人可以直接回到资源页复核。</p>
+      </section>
+
+      <!-- 体验指南 -->
+      <section class="panel" id="guide" aria-labelledby="guide-title">
+        <h2 id="guide-title">体验指南：从下载到进工程的四步</h2>
+        <p>以下流程以 Blender 4.5 + M-117 材质包为例，C4D 与 Redshift 的差异写在每步括号里。</p>
+        <ol class="steps">
+          <li><b>先验文件。</b>解压后核对贴图数量与说明是否一致，M-117 应为 42 张，缺一张就说明压缩包没下全。</li>
+          <li><b>建独立材质库。</b>在 Blender 的 Asset Browser 里新建“M-117”分类，避免和旧版混凝土贴图混名（C4D 建议用 Content Browser 单独目录）。</li>
+          <li><b>按光程调采样。</b>4.5 的 World 采样上限默认 512，室内场景建议提到 1024，否则反射噪点处理不干净。</li>
+          <li><b>记录许可截图。</b>把下载当天的许可页与文件时间戳存进工程文件夹，商单交付时一并归档。</li>
+        </ol>
+        <p>第三步是本周最容易踩坑的地方。11 月 2 日的对照表显示，8 项默认值里有 3 项会直接影响夜景渲染的噪点量，逐项核对比整体调高采样更省时间。</p>
+      </section>
+
+      <!-- 榜单 -->
+      <section class="panel" id="rank" aria-labelledby="rank-title">
+        <h2 id="rank-title">本月下载热度榜：按 11 月 1 日至 8 日计数</h2>
+        <p>排序依据是资源页显示的下载次数，不掺编辑推荐。第 4 名与第 5 名差距只有 37 次，属于日内可反转的区间。</p>
+        <ol class="rank">
+          <li><div><div class="rt">PBR 材质包 M-117</div><div class="rd">11 月 7 日发布，四天累计 3,842 次下载</div></div></li>
+          <li><div><div class="rt">老木地板扫描模型 12 联</div><div class="rd">11 月 4 日上架，累计 2,905 次，授权状态待核</div></div></li>
+          <li><div><div class="rt">C4D 2026 夜景预设 v3.2</div><div class="rd">11 月 8 日追加修正，单日 1,176 次</div></div></li>
+          <li><div><div class="rt">Cycles 光程默认值对照表</div><div class="rd">11 月 2 日更新，累计 986 次浏览</div></div></li>
+          <li><div><div class="rt">C4D 布光拆解 EP-42</div><div class="rd">11 月 5 日发布，累计 949 次播放</div></div></li>
+        </ol>
+      </section>
+
+      <!-- 用户评论 -->
+      <section class="panel" id="comments" aria-labelledby="comments-title">
+        <h2 id="comments-title">用户评论：下载之后遇到的那些事</h2>
+        <div class="comments">
+          <div class="comment">
+            <span class="avatar" aria-hidden="true">木</span>
+            <div>
+              <p class="who">木刻刀<span class="time">11-08 10:24</span></p>
+              <p>M-117 的混凝土贴图在 4.5 里直接拖进材质槽会丢法线，得手动接 Normal Map 节点。不是大问题，但第一次用会愣一下。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar" aria-hidden="true" style="background:#2b7a78">南</span>
+            <div>
+              <p class="who">南墙影子<span class="time">11-08 09:41</span></p>
+              <p>夜景预设 v3.2 在 3070 上确实偏暗，按作者说的提了 0.6 EV 才接近样图。走廊地砖的反射有点糊，感觉还能再调。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar" aria-hidden="true" style="background:#8a4f11">阿</span>
+            <div>
+              <p class="who">阿岚不做动画<span class="time">11-07 23:12</span></p>
+              <p>木地板那套拓扑是真的密，180 万面单张，我做室内远景时减到 40 万面才敢放进去。授权状态一直没更新，先拿来做练习。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar" aria-hidden="true" style="background:#5c6b73">老</span>
+            <div>
+              <p class="who">老周渲图<span class="time">11-07 18:05</span></p>
+              <p>光程对照表挺实用，但只列了 8 项，实际面板里还有几个跟着变的没写。算不上完整，当速查还行。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar" aria-hidden="true" style="background:#b8452f">柒</span>
+            <div>
+              <p class="who">柒柒建模<span class="time">11-06 21:30</span></p>
+              <p>打卡活动限定室内雨夜，收到 214 份，翻了一圈发现一半在用同一套雨滴笔刷。主题限制太窄，容易撞。</p>
+            </div>
+          </div>
+          <div class="comment">
+            <span class="avatar" aria-hidden="true" style="background:#2b7a78">灰</span>
+            <div>
+              <p class="who">灰盒子<span class="time">11-05 22:16</span></p>
+              <p>EP-42 里的布光拆解把走廊主光和补光分开讲，工程文件里能看到每盏灯的强度，这个比只看成图有用。</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="panel faq" id="faq" aria-labelledby="faq-title">
+        <h2 id="faq-title">常见问题：下载、授权与版本</h2>
+        <details>
+          <summary>M-117 材质包在 C4D 2026 里能直接用吗？</summary>
+          <div class="ans"><p>贴图本身通用，节点需要重建。法线、粗糙度、金属度三张图层按 C4D 的标准材质通道分别接入，反射层建议用 Redshift 的 Material 节点重搭，直接导入 Blender 的节点组会丢参数。</p></div>
+        </details>
+        <details>
+          <summary>老木地板扫描模型授权状态待核是什么意思？</summary>
+          <div class="ans"><p>指资源页还没贴出发布者的商用许可文本。练习、非商业展示可以先用；进商单前需要拿到书面确认，或改用明确标注 CC0 的替代扫描件。</p></div>
+        </details>
+        <details>
+          <summary>Blender 4.5 光程默认值改了什么，为什么夜景变噪？</summary>
+          <div class="ans"><p>World 采样上限从 1024 降到 512，间接光路默认值同步下调。夜景依赖多次反射，采样不足时噪点更明显，把上限提到 1024 并在灯光面板加 0.6 EV 通常能回到 4.4 的效果。</p></div>
+        </details>
+        <details>
+          <summary>“打烊”之后还能下到旧版本吗？</summary>
+          <div class="ans"><p>要看资源页是否保留历史条目。M-117 在 11 月 8 日切换条款后，旧版本记录仍可查，但下载按钮指向新条款；没有历史记录的资源，过期后一般只剩付费入口。</p></div>
+        </details>
+        <details>
+          <summary>RTX 50 系驱动 572.41 对多卡渲染有什么影响？</summary>
+          <div class="ans"><p>11 月 3 日的发布说明提到 SLI 兼容模式需关闭，否则 Redshift 多卡任务会只认到一张卡。单卡用户不受影响，渲染农场要逐台核对驱动版本。</p></div>
+        </details>
+      </section>
+
+      <!-- 相关资讯 -->
+      <section class="panel" id="news" aria-labelledby="news-title">
+        <h2 id="news-title">相关资讯：同期的三条行业动向</h2>
+        <ul>
+          <li><b>Poly Haven 11 月 6 日下架 3 个旧版混凝土扫描件</b>——仍保留 4K 与 2K 两档，替代条目在下载页顶部标注“新版”。</li>
+          <li><b>“灰盒子渲染”EP-42 播放量破 10 万</b>——11 月 5 日发布，评论区置顶了工程文件的补充说明，修正了一盏灯的强度数值。</li>
+          <li><b>某渲染农场 11 月 4 日调价</b>——GPU 小时单价上调 0.3 元，新价格从 11 月 10 日起适用于新提交任务，已排队任务按旧价。</li>
+        </ul>
+        <p>三条动向里，前两条都能在资源页或视频页找到原始措辞，第三条的价格以农场公告截图为准，属于单方通知，无法交叉验证。</p>
+      </section>
+
+      <!-- 相关推荐标签 -->
+      <section class="panel" id="related" aria-labelledby="related-title">
+        <h2 id="related-title">相关推荐：接下来可能用到的入口</h2>
+        <ul class="tag-index">
+          <li><a href="/#picks">4K 混凝土 PBR 贴图下载</a></li>
+          <li><a href="/#picks">C4D 2026 走廊夜景预设</a></li>
+          <li><a href="/#analysis">Blender 4.5 光程参数对照</a></li>
+          <li><a href="/#guide">室内雨夜场景布光步骤</a></li>
+          <li><a href="/#rank">扫描模型减面工具清单</a></li>
+          <li><a href="/#faq">CC0 素材商用授权核对</a></li>
+          <li><a href="/#comments">十一月场景打卡投稿入口</a></li>
+        </ul>
+      </section>
+
+      <!-- 创作者证言 -->
+      <section class="panel" id="voice" aria-labelledby="voice-title">
+        <h2 id="voice-title">创作者证言：三个人各自记下的一个时间点</h2>
+        <p>这里只放创作者本人写下的具体操作与日期，不做概括。</p>
+        <div class="quote-card">
+          “11 月 3 日下载的 M-117，我把它用在一个展厅项目里。11 月 8 日看到新条款后，把下载截图和许可页一起存进了交付包，客户问起来能直接翻。”
+          <cite>——独立场景师 林之，项目周期 11 月 3 日至 11 月 8 日</cite>
+        </div>
+        <div class="quote-card" style="background:#fdf1e0;border-left-color:#e08c2a;color:#6b4a1e">
+          “C4D 夜景预设我用到第 6 版才调顺。3070 上提 0.6 EV 还是不够，最后把走廊主光强度从 800 调到 1150，地砖反射才像样。”
+          <cite>——室内渲染爱好者 南墙影子，11 月 8 日记录</cite>
+        </div>
+        <div class="quote-card" style="background:#eef2f4;border-left-color:#5c6b73;color:#33454f">
+          “打卡活动我交了雨夜便利店，214 份里排到第 61。评审给的反馈是雨滴太均匀，后来把笔刷密度从 0.8 调到 0.45，第二次提交进了前 40。”
+          <cite>——建模学习者 柒柒，11 月 1 日与 11 月 6 日两次提交</cite>
+        </div>
+      </section>
+    </main>
+
+    <!-- 侧栏 -->
+    <aside class="side" aria-label="侧栏">
+      <div class="side-sticky">
+        <div class="side-card">
+          <h3>频道导航</h3>
+          <ul class="side-nav" id="sideNav">
+            <li><a href="/#overview">领域概览</a></li>
+            <li><a href="/#picks">精选资源</a></li>
+            <li><a href="/#latest">最新更新</a></li>
+            <li><a href="/#channels">分类频道</a></li>
+            <li><a href="/#analysis">深度解析</a></li>
+            <li><a href="/#guide">体验指南</a></li>
+            <li><a href="/#rank">下载热度榜</a></li>
+            <li><a href="/#comments">用户评论</a></li>
+            <li><a href="/#faq">常见问题</a></li>
+            <li><a href="/#news">相关资讯</a></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>本周关键日期</h3>
+          <ul class="mini-list">
+            <li><b>11-08</b> M-117 切换新条款</li>
+            <li><b>11-10</b> 渲染农场新价生效</li>
+            <li><b>11-12</b> 场景打卡第二轮评审</li>
+            <li><b>11-15</b> C4D 预设 v3.2 停止免费</li>
+          </ul>
+        </div>
+        <div class="side-cta">
+          <h3>投稿与勘误</h3>
+          <p>发现授权信息与资源页不一致，或想补充一条更新记录，可以带上资源页链接与日期。</p>
+          <a href="/#faq">查看核对方式</a>
+        </div>
+      </div>
+    </aside>
+  </div>
+</main>
+
+<!-- 页尾 -->
+<footer class="site-foot" id="site-footer">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <svg viewBox="0 0 64 64" role="img" aria-hidden="true">
+            <rect width="64" height="64" rx="14" fill="#1d4258"/>
+            <path d="M14 44 L23 20 L32 40 L41 16 L50 44" fill="none" stroke="#e08c2a" stroke-width="5" stroke-linejoin="round" stroke-linecap="round"/>
+          </svg>
+          91cg不打烊
+        </div>
+        <p style="font-size:13.5px;margin-bottom:8px">把素材的发布日期、版本号与授权范围写在同一张表里，让每次下载都有据可查。</p>
+        <p class="foot-note">页面更新：2026-11-08 08:10，对应更新项为公告条第 1 条与最新更新列表前 2 条。</p>
+      </div>
+      <div>
+        <h3>资源频道</h3>
+        <ul>
+          <li><a href="/#picks">PBR 材质贴图</a></li>
+          <li><a href="/#picks">三维扫描模型</a></li>
+          <li><a href="/#latest">Blender 渲染预设</a></li>
+          <li><a href="/#latest">C4D 场景工程</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>学习与工具</h3>
+        <ul>
+          <li><a href="/#analysis">光程参数对照</a></li>
+          <li><a href="/#guide">布光步骤拆解</a></li>
+          <li><a href="/#rank">下载热度榜</a></li>
+          <li><a href="/#news">行业动向</a></li>
+        </ul>
+      </div>
+      <div>
+        <h3>社区与说明</h3>
+        <ul>
+          <li><a href="/#comments">用户评论</a></li>
+          <li><a href="/#faq">授权核对问答</a></li>
+          <li><a href="/#voice">创作者证言</a></li>
+          <li><a href="/#related">相关推荐</a></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-note" style="margin-bottom:14px">页面内资源条目、下载次数、评论与创作者记录均为示例数据，用于说明内容组织方式；真实使用请以各资源页发布的许可文本与版本说明为准。</p>
+    <div class="foot-bottom">
+      <span>© 2026 91cg不打烊 · 内容示例，非商用展示</span>
+      <span>关键词：CG 素材 · 渲染工具 · 场景布光</span>
+    </div>
+  </div>
+</footer>
+
+<button id="toTop" type="button" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuBtn = document.getElementById('menuBtn');
+  var siteNav = document.getElementById('siteNav');
+  if(menuBtn && siteNav){
+    menuBtn.addEventListener('click', function(){
+      var open = siteNav.classList.toggle('open');
+      menuBtn.setAttribute('aria-expanded', open ? 'true' : 'false');
+      menuBtn.textContent = open ? '收起' : '菜单';
+    });
+    siteNav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A'){
+        siteNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '菜单';
+      }
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape' && siteNav.classList.contains('open')){
+        siteNav.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+        menuBtn.textContent = '菜单';
+        menuBtn.focus();
+      }
+    });
+  }
+
+  var toTop = document.getElementById('toTop');
+  function onScroll(){
+    if(window.scrollY > 420){
+      toTop.classList.add('show');
+    } else {
+      toTop.classList.remove('show');
+    }
+    highlightNav();
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  toTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+  var navLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = navLinks.map(function(a){
+    var id = a.getAttribute('href').replace('/#','');
+    return document.getElementById(id);
+  });
+  function highlightNav(){
+    var pos = window.scrollY + 180;
+    var current = -1;
+    for(var i=0;i<sections.length;i++){
+      if(sections[i] && sections[i].offsetTop <= pos) current = i;
+    }
+    navLinks.forEach(function(a,i){
+      a.classList.toggle('active', i === current);
+    });
+  }
+  onScroll();
+
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var feedback = document.getElementById('searchFeedback');
+  function doSearch(){
+    var q = (searchInput.value || '').trim();
+    if(!q){
+      feedback.textContent = '请输入要查找的素材、教程或活动名称。';
+      return;
+    }
+    var target = null;
+    var panels = document.querySelectorAll('main section.panel, main section.analysis');
+    for(var i=0;i<panels.length;i++){
+      if(panels[i].textContent.indexOf(q) !== -1){ target = panels[i]; break; }
+    }
+    if(target){
+      feedback.textContent = '';
+      target.scrollIntoView({behavior:'smooth', block:'start'});
+      target.style.transition = 'box-shadow .4s ease';
+      target.style.boxShadow = '0 0 0 3px #e08c2a';
+      setTimeout(function(){ target.style.boxShadow = ''; }, 1500);
+    } else {
+      feedback.textContent = '没有找到“' + q + '”。可以试试“M-117”“光程”“夜景预设”或“打卡”。';
+    }
+  }
+  searchBtn.addEventListener('click', doSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ doSearch(); }
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"WebSite",
+  "name":"91cg不打烊",
+  "description":"面向CG创作者的素材与渲染工具导航页，整理PBR贴图、扫描模型、渲染预设与社区征稿的更新记录。",
+  "inLanguage":"zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {
+      "@type":"Question",
+      "name":"M-117 材质包在 C4D 2026 里能直接用吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"贴图本身通用，节点需要重建。法线、粗糙度、金属度三张图层按 C4D 的标准材质通道分别接入，反射层建议用 Redshift 的 Material 节点重搭。"}
+    },
+    {
+      "@type":"Question",
+      "name":"老木地板扫描模型授权状态待核是什么意思？",
+      "acceptedAnswer":{"@type":"Answer","text":"指资源页还没贴出发布者的商用许可文本。练习与非商业展示可以先用，进商单前需要拿到书面确认或改用明确标注 CC0 的替代扫描件。"}
+    },
+    {
+      "@type":"Question",
+      "name":"Blender 4.5 光程默认值改了什么，为什么夜景变噪？",
+      "acceptedAnswer":{"@type":"Answer","text":"World 采样上限从 1024 降到 512，间接光路默认值同步下调。夜景依赖多次反射，采样不足时噪点更明显，把上限提到 1024 并在灯光面板加 0.6 EV 通常能回到 4.4 的效果。"}
+    },
+    {
+      "@type":"Question",
+      "name":"“打烊”之后还能下到旧版本吗？",
+      "acceptedAnswer":{"@type":"Answer","text":"要看资源页是否保留历史条目。M-117 在 11 月 8 日切换条款后旧版本记录仍可查，但下载按钮指向新条款；没有历史记录的资源过期后一般只剩付费入口。"}
+    },
+    {
+      "@type":"Question",
+      "name":"RTX 50 系驱动 572.41 对多卡渲染有什么影响？",
+      "acceptedAnswer":{"@type":"Answer","text":"11 月 3 日的发布说明提到 SLI 兼容模式需关闭，否则 Redshift 多卡任务会只认到一张卡。单卡用户不受影响，渲染农场要逐台核对驱动版本。"}
+    }
+  ]
+}
+</script>
+</body>
+          </html>
