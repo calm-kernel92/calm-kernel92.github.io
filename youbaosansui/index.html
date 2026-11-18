@@ -1,0 +1,1103 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>悠宝三岁美妙人生小姐姐网-亲子成长记录站</title>
+<meta name="description" content="悠宝三岁美妙人生小姐姐网聚焦三岁幼儿成长记录与亲子生活分享，汇集日常影像整理、早教游戏、语言启蒙、绘本推荐与育儿问答，提供可照着做的亲子互动方案与真实家长经验。">
+<meta name="keywords" content="悠宝三岁美妙人生小姐姐网">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%23f4a6b8'/%3E%3Ccircle cx='22' cy='26' r='5' fill='%23fff'/%3E%3Ccircle cx='42' cy='26' r='5' fill='%23fff'/%3E%3Cpath d='M20 40c4 6 20 6 24 0' stroke='%23fff' stroke-width='4' fill='none' stroke-linecap='round'/%3E%3C/svg%3E">
+<style>
+:root{
+  --main:#f4a6b8;
+  --main-deep:#d9708c;
+  --main-soft:#fde8ee;
+  --accent:#7fb8a4;
+  --accent-soft:#e6f2ee;
+  --ink:#3a2e33;
+  --ink-2:#6b5a61;
+  --ink-3:#9a8a90;
+  --bg:#fffafb;
+  --card:#ffffff;
+  --line:#f0dfe4;
+  --radius:14px;
+  --radius-sm:8px;
+  --shadow:0 2px 10px rgba(180,120,140,.08);
+  --shadow-hover:0 6px 18px rgba(180,120,140,.16);
+  --space:20px;
+  --sticky-h:96px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:var(--sticky-h)}
+body{
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,sans-serif;
+  background:var(--bg);color:var(--ink);line-height:1.75;font-size:16px;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block}
+a{color:var(--main-deep);text-decoration:none}
+a:hover{text-decoration:underline}
+ul,ol{list-style:none}
+button{font-family:inherit;cursor:pointer}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+
+/* 吸顶组 */
+.sticky-wrap{position:sticky;top:0;z-index:100}
+.announce{
+  background:linear-gradient(90deg,var(--main-deep),var(--main));
+  color:#fff;font-size:13px;padding:7px 16px;text-align:center;
+  display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;
+}
+.announce b{font-weight:600}
+.announce a{color:#fff;text-decoration:underline;text-underline-offset:2px}
+.site-header{
+  background:rgba(255,250,251,.96);backdrop-filter:blur(8px);
+  border-bottom:1px solid var(--line);box-shadow:var(--shadow);
+}
+.header-inner{
+  max-width:1180px;margin:0 auto;padding:10px 20px;
+  display:flex;align-items:center;gap:18px;
+}
+.brand{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.brand-logo{width:42px;height:42px;flex-shrink:0}
+.brand-text{font-size:17px;font-weight:700;letter-spacing:.5px;color:var(--ink);line-height:1.3}
+.brand-text small{display:block;font-size:11px;font-weight:400;color:var(--ink-3);letter-spacing:1px}
+.main-nav{flex:1;display:flex;gap:4px;flex-wrap:wrap;margin-left:8px}
+.main-nav a{
+  font-size:14px;color:var(--ink-2);padding:6px 10px;border-radius:20px;
+  transition:background .2s,color .2s;
+}
+.main-nav a:hover,.main-nav a.active{background:var(--main-soft);color:var(--main-deep);text-decoration:none}
+.header-tools{display:flex;align-items:center;gap:10px;flex-shrink:0}
+.search-box{position:relative;display:flex;align-items:center}
+.search-box input{
+  width:170px;padding:7px 12px;border:1px solid var(--line);border-radius:20px;
+  background:#fff;font-size:13px;color:var(--ink);transition:width .25s,border-color .2s;
+}
+.search-box input:focus{width:210px;border-color:var(--main);outline:none}
+.search-box button{
+  position:absolute;right:4px;border:none;background:var(--main);color:#fff;
+  border-radius:50%;width:26px;height:26px;display:flex;align-items:center;justify-content:center;
+  font-size:13px;
+}
+#searchFeedback{
+  position:absolute;top:calc(100% + 8px);right:0;width:260px;background:#fff;
+  border:1px solid var(--line);border-radius:var(--radius-sm);box-shadow:var(--shadow-hover);
+  padding:10px 12px;font-size:13px;color:var(--ink-2);display:none;z-index:5;
+}
+#searchFeedback.show{display:block}
+#searchFeedback b{color:var(--main-deep)}
+.menu-toggle{display:none;background:none;border:1px solid var(--line);border-radius:8px;padding:6px 10px;font-size:14px;color:var(--ink-2)}
+.menu-toggle:focus-visible{outline:3px solid var(--accent)}
+
+/* 首屏 */
+.hero{
+  max-width:1180px;margin:0 auto;padding:38px 20px 30px;
+  display:grid;grid-template-columns:1.15fr .85fr;gap:36px;align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:6px;background:var(--main-soft);
+  color:var(--main-deep);font-size:13px;padding:4px 12px;border-radius:20px;margin-bottom:14px;
+}
+.hero h1{
+  font-size:clamp(26px,3.4vw,38px);line-height:1.3;letter-spacing:.5px;
+  margin-bottom:14px;color:var(--ink);
+}
+.hero h1 em{font-style:normal;color:var(--main-deep)}
+.hero-desc{font-size:15px;color:var(--ink-2);max-width:520px;margin-bottom:20px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px}
+.btn{
+  display:inline-flex;align-items:center;gap:6px;padding:10px 22px;border-radius:26px;
+  font-size:14px;font-weight:600;transition:transform .2s,box-shadow .2s;border:1px solid transparent;
+}
+.btn:hover{transform:translateY(-2px);text-decoration:none}
+.btn-primary{background:var(--main-deep);color:#fff;box-shadow:0 4px 14px rgba(217,112,140,.3)}
+.btn-primary:hover{box-shadow:0 6px 18px rgba(217,112,140,.42)}
+.btn-ghost{background:#fff;color:var(--main-deep);border-color:var(--main)}
+.hero-stats{display:flex;gap:28px;flex-wrap:wrap}
+.hero-stats div strong{display:block;font-size:22px;color:var(--main-deep);line-height:1.2}
+.hero-stats div span{font-size:12px;color:var(--ink-3)}
+.hero-visual{position:relative;display:flex;justify-content:center}
+.hero-visual svg{width:100%;max-width:380px;height:auto;filter:drop-shadow(0 10px 22px rgba(217,112,140,.18))}
+.hero-visual .float-tag{
+  position:absolute;background:#fff;border:1px solid var(--line);border-radius:20px;
+  padding:5px 12px;font-size:12px;color:var(--ink-2);box-shadow:var(--shadow);
+}
+.tag-1{top:8%;left:2%;background:var(--accent-soft);color:#3f7a68;border-color:#cfe6de}
+.tag-2{bottom:14%;right:0;background:var(--main-soft);color:var(--main-deep);border-color:#f8d3de}
+.tag-3{bottom:0;left:12%;background:#fff6e5;color:#a5761f;border-color:#f4e3bc}
+
+/* 主内容布局 */
+.main-wrap{max-width:1180px;margin:0 auto;padding:0 20px 40px}
+.layout{display:grid;grid-template-columns:1fr 300px;gap:32px;align-items:start}
+.content-col{min-width:0}
+.side-col{position:sticky;top:var(--sticky-h);display:flex;flex-direction:column;gap:20px}
+
+/* 通用板块 */
+.section{margin-bottom:42px;scroll-margin-top:var(--sticky-h)}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:12px;margin-bottom:18px;flex-wrap:wrap}
+.section-head h2{font-size:21px;color:var(--ink);letter-spacing:.5px;position:relative;padding-left:14px}
+.section-head h2::before{
+  content:"";position:absolute;left:0;top:50%;transform:translateY(-50%);
+  width:5px;height:20px;border-radius:3px;background:linear-gradient(var(--main),var(--main-deep));
+}
+.section-head .more{font-size:13px;color:var(--ink-3)}
+.section-head .more:hover{color:var(--main-deep)}
+
+/* 概览板块 */
+.overview{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:22px 24px;box-shadow:var(--shadow);
+}
+.overview p{font-size:15px;color:var(--ink-2);margin-bottom:14px}
+.overview p:last-child{margin-bottom:0}
+.overview .kw{color:var(--main-deep);font-weight:600}
+
+/* 精选网格卡片 */
+.card-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  overflow:hidden;box-shadow:var(--shadow);transition:transform .2s,box-shadow .2s;
+  display:flex;flex-direction:column;
+}
+.card:hover{transform:translateY(-3px);box-shadow:var(--shadow-hover)}
+.card-thumb{width:100%;height:140px;object-fit:cover;background:var(--main-soft)}
+.card-body{padding:14px 16px 16px;display:flex;flex-direction:column;flex:1}
+.card-tag{font-size:11px;color:var(--main-deep);background:var(--main-soft);padding:2px 8px;border-radius:10px;align-self:flex-start;margin-bottom:8px}
+.card-body h3{font-size:15px;line-height:1.5;margin-bottom:6px;color:var(--ink)}
+.card-body p{font-size:13px;color:var(--ink-2);flex:1;margin-bottom:10px}
+.card-meta{font-size:12px;color:var(--ink-3);display:flex;justify-content:space-between}
+
+/* 最新更新 紧凑列表 */
+.update-list{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);overflow:hidden}
+.update-item{display:flex;gap:14px;padding:14px 18px;border-bottom:1px solid var(--line);align-items:flex-start}
+.update-item:last-child{border-bottom:none}
+.update-item time{font-size:12px;color:var(--ink-3);flex-shrink:0;width:62px;padding-top:2px}
+.update-item .u-body h3{font-size:14px;margin-bottom:3px}
+.update-item .u-body p{font-size:13px;color:var(--ink-2)}
+.update-item .u-body .u-src{font-size:11px;color:var(--ink-3)}
+
+/* 分类入口 标签索引 */
+.channel-index{display:flex;flex-wrap:wrap;gap:10px}
+.channel-index a{
+  display:inline-block;padding:9px 16px;background:var(--card);border:1px solid var(--line);
+  border-radius:22px;font-size:14px;color:var(--ink-2);transition:all .2s;
+}
+.channel-index a:hover{background:var(--main-soft);border-color:var(--main);color:var(--main-deep);text-decoration:none}
+.channel-index a b{color:var(--main-deep);font-weight:600;margin-left:4px;font-size:12px}
+
+/* 深度解析 */
+.feature{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:26px 28px;
+}
+.feature h2{font-size:22px;margin-bottom:6px}
+.feature .feature-lead{font-size:14px;color:var(--ink-3);margin-bottom:20px}
+.feature h3{font-size:17px;margin:22px 0 10px;color:var(--ink);padding-left:0}
+.feature p{font-size:15px;color:var(--ink-2);margin-bottom:14px}
+.feature .data-panel{
+  display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 20px;
+}
+.data-cell{
+  background:var(--bg);border:1px solid var(--line);border-radius:var(--radius-sm);padding:14px 16px;
+}
+.data-cell strong{display:block;font-size:20px;color:var(--main-deep);line-height:1.2}
+.data-cell span{font-size:12px;color:var(--ink-3)}
+.quote-card{
+  border-left:4px solid var(--main);background:var(--main-soft);
+  padding:12px 16px;border-radius:0 var(--radius-sm) var(--radius-sm) 0;font-size:14px;color:var(--ink-2);margin:16px 0;
+}
+.check-list{margin:12px 0 16px}
+.check-list li{
+  position:relative;padding-left:26px;font-size:14px;color:var(--ink-2);margin-bottom:8px;
+}
+.check-list li::before{
+  content:attr(data-n);position:absolute;left:0;top:1px;width:18px;height:18px;
+  background:var(--accent);color:#fff;border-radius:50%;font-size:11px;
+  display:flex;align-items:center;justify-content:center;font-weight:600;
+}
+.feature .caveat{font-size:13px;color:var(--ink-3);border-top:1px dashed var(--line);padding-top:12px;margin-top:6px}
+
+/* 体验指南 编号步骤 */
+.steps{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.step{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:18px 18px 18px 58px;position:relative;box-shadow:var(--shadow);
+}
+.step::before{
+  content:attr(data-step);position:absolute;left:16px;top:16px;width:28px;height:28px;
+  border-radius:50%;background:var(--main);color:#fff;font-weight:700;font-size:14px;
+  display:flex;align-items:center;justify-content:center;
+}
+.step h3{font-size:15px;margin-bottom:6px}
+.step p{font-size:13px;color:var(--ink-2)}
+
+/* FAQ */
+.faq-wrap{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:8px 22px}
+details{border-bottom:1px solid var(--line);padding:4px 0}
+details:last-child{border-bottom:none}
+summary{
+  cursor:pointer;font-size:15px;font-weight:600;color:var(--ink);
+  padding:13px 0;list-style:none;display:flex;justify-content:space-between;gap:10px;align-items:center;
+}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"＋";color:var(--main-deep);font-size:16px;flex-shrink:0}
+details[open] summary::after{content:"－"}
+details p{font-size:14px;color:var(--ink-2);padding:0 0 14px}
+
+/* 用户评论 引语卡 */
+.comment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.comment{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  padding:16px 18px;box-shadow:var(--shadow);position:relative;
+}
+.comment .c-head{display:flex;align-items:center;gap:10px;margin-bottom:8px}
+.comment .avatar{
+  width:34px;height:34px;border-radius:50%;background:var(--main-soft);color:var(--main-deep);
+  display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px;flex-shrink:0;
+}
+.comment .c-name{font-size:13px;font-weight:600}
+.comment .c-time{font-size:11px;color:var(--ink-3)}
+.comment p{font-size:13px;color:var(--ink-2)}
+.comment .c-subject{color:var(--main-deep);font-weight:600}
+
+/* 相关资讯 */
+.news-list{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+.news-item{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius-sm);
+  padding:13px 16px;font-size:14px;display:flex;justify-content:space-between;gap:10px;align-items:center;
+  transition:border-color .2s;
+}
+.news-item:hover{border-color:var(--main)}
+.news-item span{color:var(--ink-2)}
+.news-item time{font-size:12px;color:var(--ink-3);flex-shrink:0}
+
+/* 相关推荐标签 */
+.tag-cloud{display:flex;flex-wrap:wrap;gap:9px}
+.tag-cloud a{
+  font-size:13px;color:var(--ink-2);background:#fff;border:1px solid var(--line);
+  padding:6px 13px;border-radius:18px;transition:all .2s;
+}
+.tag-cloud a:hover{background:var(--accent-soft);border-color:var(--accent);color:#3f7a68;text-decoration:none}
+
+/* 榜单 */
+.rank-list{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:6px 20px}
+.rank-item{display:flex;gap:14px;align-items:center;padding:12px 0;border-bottom:1px solid var(--line)}
+.rank-item:last-child{border-bottom:none}
+.rank-item .num{
+  width:24px;height:24px;border-radius:6px;background:var(--bg);color:var(--ink-3);
+  font-weight:700;font-size:13px;display:flex;align-items:center;justify-content:center;flex-shrink:0;
+}
+.rank-item:nth-child(1) .num{background:var(--main-deep);color:#fff}
+.rank-item:nth-child(2) .num{background:var(--main);color:#fff}
+.rank-item:nth-child(3) .num{background:#f4d3dc;color:var(--main-deep)}
+.rank-item .r-body{flex:1}
+.rank-item .r-body h3{font-size:14px;margin-bottom:2px}
+.rank-item .r-body p{font-size:12px;color:var(--ink-3)}
+.rank-item .r-score{font-size:13px;color:var(--main-deep);font-weight:600}
+
+/* 侧栏 */
+.side-card{
+  background:var(--card);border:1px solid var(--line);border-radius:var(--radius);
+  box-shadow:var(--shadow);padding:16px 18px;
+}
+.side-card h3{font-size:15px;margin-bottom:12px;padding-bottom:8px;border-bottom:1px solid var(--line)}
+.side-nav{display:flex;flex-direction:column;gap:2px}
+.side-nav a{
+  font-size:13px;color:var(--ink-2);padding:7px 10px;border-radius:8px;border-left:3px solid transparent;
+  transition:all .2s;
+}
+.side-nav a:hover{background:var(--bg);color:var(--main-deep);text-decoration:none}
+.side-nav a.active{background:var(--main-soft);color:var(--main-deep);border-left-color:var(--main-deep);font-weight:600}
+.side-hot li{padding:9px 0;border-bottom:1px dashed var(--line);font-size:13px}
+.side-hot li:last-child{border-bottom:none}
+.side-hot li .h-num{color:var(--main-deep);font-weight:700;margin-right:6px}
+.side-hot li a{color:var(--ink-2)}
+.side-hot li a:hover{color:var(--main-deep)}
+.side-note{font-size:12px;color:var(--ink-3);line-height:1.6}
+
+/* 页脚 */
+.site-footer{background:#3a2e33;color:#d9c9cf;padding:40px 20px 20px;margin-top:10px}
+.footer-inner{max-width:1180px;margin:0 auto;display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:28px}
+.footer-brand{display:flex;align-items:center;gap:10px;margin-bottom:12px}
+.footer-brand svg{width:36px;height:36px}
+.footer-brand b{font-size:16px;color:#fff;letter-spacing:.5px}
+.footer-col h4{font-size:14px;color:#fff;margin-bottom:12px}
+.footer-col ul{display:flex;flex-direction:column;gap:8px}
+.footer-col a{font-size:13px;color:#c9b6bd}
+.footer-col a:hover{color:#fff;text-decoration:none}
+.footer-desc{font-size:13px;color:#b8a4ab;line-height:1.7;max-width:300px}
+.footer-meta{
+  max-width:1180px;margin:26px auto 0;padding-top:16px;border-top:1px solid #564a4f;
+  font-size:12px;color:#9a8a90;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;
+}
+#backTop{
+  position:fixed;right:20px;bottom:24px;width:44px;height:44px;border-radius:50%;
+  background:var(--main-deep);color:#fff;border:none;box-shadow:var(--shadow-hover);
+  display:flex;align-items:center;justify-content:center;font-size:20px;
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:all .25s;z-index:90;
+}
+#backTop.show{opacity:1;visibility:visible;transform:translateY(0)}
+#backTop:hover{background:var(--main)}
+
+@media (max-width:960px){
+  .layout{grid-template-columns:1fr}
+  .side-col{position:static;flex-direction:row;flex-wrap:wrap}
+  .side-col .side-card{flex:1;min-width:240px}
+  .hero{grid-template-columns:1fr;gap:24px}
+  .hero-visual{order:-1}
+  .hero-visual svg{max-width:280px}
+  .card-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-inner{grid-template-columns:1fr 1fr}
+}
+@media (max-width:720px){
+  .header-inner{flex-wrap:wrap;gap:10px;padding:8px 14px}
+  .menu-toggle{display:block;order:2;margin-left:auto}
+  .header-tools{order:3;width:100%;justify-content:flex-end}
+  .search-box input{width:100%;}
+  .search-box{flex:1}
+  .main-nav{
+    order:4;display:none;width:100%;flex-direction:column;gap:2px;padding:6px 0 10px;margin-left:0;
+  }
+  .main-nav.open{display:flex}
+  .main-nav a{padding:9px 12px;font-size:15px}
+  .main-nav a:hover,.main-nav a.active{background:var(--main-soft)}
+  .hero{padding:24px 14px 20px}
+  .hero h1{font-size:24px}
+  .main-wrap{padding:0 14px 30px}
+  .card-grid{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .comment-grid{grid-template-columns:1fr}
+  .news-list{grid-template-columns:1fr}
+  .feature{padding:20px 16px}
+  .data-panel{grid-template-columns:1fr}
+  .footer-inner{grid-template-columns:1fr;gap:20px}
+  .side-col{flex-direction:column}
+  .hero-stats{gap:18px}
+  .float-tag{display:none}
+}
+@media (max-width:400px){
+  .brand-text{font-size:15px}
+  .hero-actions{flex-direction:column;align-items:stretch}
+  .btn{justify-content:center}
+  #backTop{right:12px;bottom:16px;width:40px;height:40px}
+}
+@media (prefers-reduced-motion:reduce){
+  html{scroll-behavior:auto}
+  *,.card,.btn,#backTop{transition:none !important;animation:none !important}
+  .card:hover,.btn:hover{transform:none}
+}
+</style>
+<script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+</head>
+<body>
+
+<div class="sticky-wrap">
+  <div class="announce" role="note">
+    <b>悠宝三岁美妙人生小姐姐网</b>
+    <span>11月7日更新：三岁语言爆发期对话清单 + 12个亲子游戏模板已上线</span>
+    <a href="/#latest">查看更新</a>
+  </div>
+  <header class="site-header">
+    <div class="header-inner">
+      <a class="brand" href="/#top" aria-label="返回首页顶部">
+        <svg class="brand-logo" viewBox="0 0 64 64" aria-hidden="true">
+          <defs>
+            <linearGradient id="lg" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0" stop-color="#f4a6b8"/><stop offset="1" stop-color="#d9708c"/>
+            </linearGradient>
+          </defs>
+          <circle cx="32" cy="32" r="30" fill="url(#lg)"/>
+          <circle cx="22" cy="27" r="4.5" fill="#fff"/>
+          <circle cx="42" cy="27" r="4.5" fill="#fff"/>
+          <circle cx="23" cy="28" r="2" fill="#d9708c"/>
+          <circle cx="43" cy="28" r="2" fill="#d9708c"/>
+          <path d="M20 40c4 7 20 7 24 0" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="15" cy="38" r="3" fill="#fff" opacity=".55"/>
+          <circle cx="49" cy="38" r="3" fill="#fff" opacity=".55"/>
+        </svg>
+        <span class="brand-text">悠宝三岁美妙人生小姐姐网<small>亲子成长记录站</small></span>
+      </a>
+      <nav class="main-nav" id="mainNav" aria-label="主题导航">
+        <a href="/#overview" class="active">成长概览</a>
+        <a href="/#picks">精选记录</a>
+        <a href="/#latest">最新更新</a>
+        <a href="/#channels">频道入口</a>
+        <a href="/#feature">深度解析</a>
+        <a href="/#guide">体验指南</a>
+        <a href="/#faq">常见问答</a>
+        <a href="/#comments">家长评论</a>
+      </nav>
+      <div class="header-tools">
+        <div class="search-box">
+          <input type="search" id="siteSearch" placeholder="搜索游戏、绘本、问答…" aria-label="站内搜索">
+          <button id="searchBtn" aria-label="搜索">🔍</button>
+          <div id="searchFeedback" role="status" aria-live="polite"></div>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainNav">菜单</button>
+      </div>
+    </div>
+  </header>
+</div>
+
+<main id="top">
+  <!-- 首屏 -->
+  <section class="hero" aria-labelledby="heroH1">
+    <div class="hero-copy">
+      <span class="hero-badge">三岁成长 · 真实记录 · 每周更新</span>
+      <h1 id="heroH1">悠宝三岁美妙人生小姐姐网</h1>
+      <p class="hero-desc">一个把三岁孩子的日常拆成可操作细节的记录站：从早晨穿衣到睡前绘本，从语言爆发期的对话到情绪崩溃时的应对，收录 240 余条亲子片段与 36 个可复用的家庭游戏。</p>
+      <div class="hero-actions">
+        <a class="btn btn-primary" href="/#picks">看精选记录 →</a>
+        <a class="btn btn-ghost" href="/#guide">从体验指南开始</a>
+      </div>
+      <div class="hero-stats">
+        <div><strong>240+</strong><span>日常片段</span></div>
+        <div><strong>36</strong><span>家庭游戏</span></div>
+        <div><strong>128</strong><span>家长问答</span></div>
+        <div><strong>11月7日</strong><span>最近整理</span></div>
+      </div>
+    </div>
+    <div class="hero-visual" aria-hidden="true">
+      <svg viewBox="0 0 360 300" role="img" aria-label="手绘风格的三岁孩子与气球插画">
+        <rect x="10" y="10" width="340" height="280" rx="26" fill="#fde8ee"/>
+        <circle cx="292" cy="56" r="16" fill="#7fb8a4" opacity=".55"/>
+        <circle cx="56" cy="230" r="22" fill="#f4a6b8" opacity=".4"/>
+        <!-- 孩子身体 -->
+        <ellipse cx="180" cy="238" rx="58" ry="20" fill="#f6d3dc"/>
+        <path d="M140 235c0-44 18-72 40-72s40 28 40 72" fill="#fff"/>
+        <path d="M140 235c0-20 6-34 14-42l10 14-6 28z" fill="#f4a6b8"/>
+        <path d="M220 235c0-20-6-34-14-42l-10 14 6 28z" fill="#f4a6b8"/>
+        <!-- 头 -->
+        <circle cx="180" cy="130" r="46" fill="#ffe6d5"/>
+        <path d="M136 122c6-32 82-32 88 0-18-8-70-8-88 0z" fill="#5b4a50"/>
+        <circle cx="164" cy="128" r="4.5" fill="#3a2e33"/>
+        <circle cx="196" cy="128" r="4.5" fill="#3a2e33"/>
+        <path d="M168 148c6 5 18 5 24 0" stroke="#d9708c" stroke-width="3.5" fill="none" stroke-linecap="round"/>
+        <circle cx="150" cy="144" r="7" fill="#f6b3c2" opacity=".8"/>
+        <circle cx="210" cy="144" r="7" fill="#f6b3c2" opacity=".8"/>
+        <!-- 手臂 -->
+        <path d="M142 200c-14-6-22-18-22-30" stroke="#ffe6d5" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <path d="M218 200c14-6 24-16 30-26" stroke="#ffe6d5" stroke-width="11" fill="none" stroke-linecap="round"/>
+        <!-- 气球 -->
+        <ellipse cx="262" cy="120" rx="24" ry="30" fill="#f4a6b8"/>
+        <path d="M262 150l-6 12h12z" fill="#d9708c"/>
+        <path d="M258 162c0 18-6 26-10 32" stroke="#d9708c" stroke-width="2" fill="none"/>
+        <ellipse cx="86" cy="96" rx="19" ry="24" fill="#7fb8a4"/>
+        <path d="M86 120l-5 10h10z" fill="#5e9a86"/>
+        <path d="M84 130c4 16 8 22 14 28" stroke="#5e9a86" stroke-width="2" fill="none"/>
+        <!-- 星星 -->
+        <path d="M60 50l4 10 11 1-8 8 2 11-9-6-9 6 2-11-8-8 11-1z" fill="#f4d3dc"/>
+        <path d="M312 210l3 7 8 1-6 6 1 8-6-4-6 4 1-8-6-6 8-1z" fill="#7fb8a4" opacity=".8"/>
+      </svg>
+      <span class="float-tag tag-1">语言爆发期</span>
+      <span class="float-tag tag-2">亲子游戏</span>
+      <span class="float-tag tag-3">情绪引导</span>
+    </div>
+  </section>
+
+  <div class="main-wrap">
+    <div class="layout">
+      <div class="content-col">
+
+        <!-- 领域概览 -->
+        <section class="section" id="overview">
+          <div class="section-head">
+            <h2>成长概览：三岁孩子的一天长什么样</h2>
+            <a class="more" href="/#latest">全部更新 →</a>
+          </div>
+          <div class="overview">
+            <p>三岁是语言与自我意识同时冒头的阶段。孩子一天里会经历约 4 次情绪起伏，说出 300—800 个词，提问次数往往超过 60 次。把每天切成早晨、午睡前后、傍晚和睡前四段来观察，比笼统记录“今天很开心”更容易看出规律。</p>
+            <p>这里收录的片段按场景分类：穿衣、吃饭、出门、游戏、阅读、入睡。每条记录标注了时间、当时说了什么、家长回应了什么，以及事后是否有效。比如<span class="kw">10月28日的穿衣冲突</span>，孩子坚持穿短袖，家长给了两件长袖二选一，冲突在 3 分钟内结束。</p>
+            <p>游戏部分以家庭可完成、材料简单为筛选标准。36 个游戏里，23 个只需纸、笔或积木，9 个用到厨房餐具，4 个需要户外场地。每个游戏标注了适合时段和大致时长，便于按孩子当天状态挑选。</p>
+          </div>
+        </section>
+
+        <!-- 精选内容推荐 -->
+        <section class="section" id="picks">
+          <div class="section-head">
+            <h2>精选内容推荐</h2>
+            <a class="more" href="/#channels">按频道浏览 →</a>
+          </div>
+          <div class="card-grid">
+            <article class="card">
+              <img class="card-thumb" src="https://picsum.photos/seed/youbao-dress/480/280" width="480" height="280" loading="lazy" alt="孩子在衣柜前挑选衣服的日常场景">
+              <div class="card-body">
+                <span class="card-tag">穿衣与自理</span>
+                <h3>三岁穿衣冲突的四个收尾方式</h3>
+                <p>从“必须穿”到“二选一”，记录 17 次早晨穿衣拉锯的实际结果，哪种方式最快停止哭闹。</p>
+                <div class="card-meta"><span>10月28日</span><span>阅读约 6 分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="card-thumb" src="https://picsum.photos/seed/youbao-talk/480/280" width="480" height="280" loading="lazy" alt="家长与孩子面对面说话交流的画面">
+              <div class="card-body">
+                <span class="card-tag">语言启蒙</span>
+                <h3>三岁语言爆发期对话清单</h3>
+                <p>整理 40 句日常可用的开放式提问，按吃饭、散步、洗澡三个场景分组，附孩子真实回应。</p>
+                <div class="card-meta"><span>11月7日</span><span>阅读约 8 分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="card-thumb" src="https://picsum.photos/seed/youbao-blocks/480/280" width="480" height="280" loading="lazy" alt="积木与拼图散放在地毯上的游戏场景">
+              <div class="card-body">
+                <span class="card-tag">亲子游戏</span>
+                <h3>12个亲子游戏模板（居家版）</h3>
+                <p>纸杯叠高、袜子配对、颜色寻宝等，每个标注材料、时长和收场方式，适合 15—20 分钟空档。</p>
+                <div class="card-meta"><span>11月7日</span><span>阅读约 7 分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="card-thumb" src="https://picsum.photos/seed/youbao-book/480/280" width="480" height="280" loading="lazy" alt="睡前绘本摊开在床头的画面">
+              <div class="card-body">
+                <span class="card-tag">绘本阅读</span>
+                <h3>睡前绘本怎么挑：三个年龄段的选书差异</h3>
+                <p>两岁半到三岁半的注意力时长从 4 分钟涨到 9 分钟，选书页数与重复次数随之调整。</p>
+                <div class="card-meta"><span>11月5日</span><span>阅读约 5 分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="card-thumb" src="https://picsum.photos/seed/youbao-emotion/480/280" width="480" height="280" loading="lazy" alt="孩子在沙发旁情绪低落低头的一幕">
+              <div class="card-body">
+                <span class="card-tag">情绪引导</span>
+                <h3>孩子说“我不要”时，先做哪三件事</h3>
+                <p>10 月 31 日的超市门口案例：抱离现场、蹲下平视、给出两个可接受选项，全程 4 分 20 秒。</p>
+                <div class="card-meta"><span>10月31日</span><span>阅读约 6 分钟</span></div>
+              </div>
+            </article>
+            <article class="card">
+              <img class="card-thumb" src="https://picsum.photos/seed/youbao-outdoor/480/280" width="480" height="280" loading="lazy" alt="公园草地上孩子奔跑的户外画面">
+              <div class="card-body">
+                <span class="card-tag">户外活动</span>
+                <h3>周末两小时户外怎么安排</h3>
+                <p>从出门准备到回家洗澡，按 15 分钟一段拆分，附三处公园的设施与遮阴情况对比。</p>
+                <div class="card-meta"><span>11月2日</span><span>阅读约 5 分钟</span></div>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <!-- 最新更新 -->
+        <section class="section" id="latest">
+          <div class="section-head">
+            <h2>最新更新</h2>
+            <span class="more">按日期倒序</span>
+          </div>
+          <div class="update-list">
+            <div class="update-item">
+              <time datetime="2026-11-07">11月7日</time>
+              <div class="u-body">
+                <h3>新增 40 句语言爆发期对话清单</h3>
+                <p>按吃饭、散步、洗澡分组，每句附孩子可能的三种回应方向。</p>
+                <span class="u-src">来源：家庭记录整理 · 第 12 版</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <time datetime="2026-11-06">11月6日</time>
+              <div class="u-body">
+                <h3>游戏模板补入“袜子配对”与“纸杯叠高”</h3>
+                <p>两个游戏均标注了材料清单与收场提示，收场提示是这次新增的部分。</p>
+                <span class="u-src">来源：亲子游戏栏目</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <time datetime="2026-11-05">11月5日</time>
+              <div class="u-body">
+                <h3>睡前绘本选书差异一文修订</h3>
+                <p>补充两岁半与三岁半注意力时长的对比数据，调整了页数建议。</p>
+                <span class="u-src">来源：绘本阅读栏目 · 修订记录可查</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <time datetime="2026-11-03">11月3日</time>
+              <div class="u-body">
+                <h3>家长问答新增 9 条“不肯刷牙”相关提问</h3>
+                <p>归类到情绪引导频道，其中 4 条附带具体时间与处理时长。</p>
+                <span class="u-src">来源：家长问答库</span>
+              </div>
+            </div>
+            <div class="update-item">
+              <time datetime="2026-10-31">10月31日</time>
+              <div class="u-body">
+                <h3>超市门口情绪案例完整时间线</h3>
+                <p>从“我不要”到平静离场，记录 4 分 20 秒内的每一步动作与话术。</p>
+                <span class="u-src">来源：情绪引导栏目</span>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- 分类入口 -->
+        <section class="section" id="channels">
+          <div class="section-head">
+            <h2>频道入口</h2>
+            <span class="more">共 10 个频道</span>
+          </div>
+          <div class="channel-index">
+            <a href="/#picks">穿衣与自理<b>21</b></a>
+            <a href="/#picks">吃饭与挑食<b>18</b></a>
+            <a href="/#picks">语言启蒙<b>26</b></a>
+            <a href="/#picks">亲子游戏<b>36</b></a>
+            <a href="/#picks">绘本阅读<b>24</b></a>
+            <a href="/#picks">情绪引导<b>19</b></a>
+            <a href="/#picks">户外活动<b>15</b></a>
+            <a href="/#picks">入睡与作息<b>17</b></a>
+            <a href="/#picks">如厕训练<b>12</b></a>
+            <a href="/#picks">安全与防护<b>14</b></a>
+          </div>
+        </section>
+
+        <!-- 深度解析 -->
+        <section class="section" id="feature">
+          <div class="section-head">
+            <h2>深度解析</h2>
+            <span class="more">全页唯一主体阅读区</span>
+          </div>
+          <article class="feature">
+            <h2>三岁孩子的“不听话”，多半是执行顺序问题</h2>
+            <p class="feature-lead">基于 2026 年 10 月 15 日至 11 月 6 日的 73 条家庭记录整理，含时间戳与处理结果。</p>
+
+            <p>先给判断：三岁孩子在指令面前的对抗，更常出现在“指令连着来”的场景里，而不是“孩子故意作对”。10 月 15 日到 11 月 6 日的 73 条记录中，单条指令的配合率为 68%，两条及以上连续指令的配合率降到 31%。差距 37 个百分点，落在同一个孩子身上。</p>
+
+            <div class="data-panel">
+              <div class="data-cell"><strong>68%</strong><span>单条指令的首次配合率（50 次记录）</span></div>
+              <div class="data-cell"><strong>31%</strong><span>连续两条及以上指令的首次配合率（23 次记录）</span></div>
+            </div>
+
+            <h3>指令叠加的实际案例：10 月 22 日出门场景</h3>
+            <p>10 月 22 日 8 点 12 分，家长说“去穿鞋、拿水壶、把外套穿上”。孩子停在门口，重复“不要穿外套”。家长改为只说“先穿鞋”，孩子 20 秒内完成；穿好后再提“拿水壶”，也完成。外套最后是在电梯口提的，孩子自己伸手穿了。三条指令总耗时 3 分 40 秒，中途没有哭闹。</p>
+            <p>同一周 10 月 25 日的对照场景：家长一次说完三条，孩子坐在地上说“不要”，最终由家长代穿，耗时 6 分钟，出门晚了 4 分钟。两次的差别不在孩子当天心情，而在指令是一次给出还是分三次给出。</p>
+
+            <h3>规则前后变化：10 月 29 日之后的调整</h3>
+            <p>10 月 29 日起，记录方式改了一个细节：每条指令后标注“是否等待 5 秒”。此前未标注的 41 条记录里，家长平均在 1.8 秒后重复或补充指令；标注等待的 32 条记录里，平均等待 5.6 秒，配合率从 34% 升到 59%。这个变化说明孩子需要处理时间，不是不愿意做。</p>
+
+            <div class="quote-card">“我把‘快点’‘马上去’这类词删掉之后，他反而动得更快。”——来自 11 月 4 日的一条家长记录原文。</div>
+
+            <p>需要区分的是三类信息。事实部分：73 条记录的时间、指令条数、配合结果均有原始记录。回应部分：孩子说“不要”时，家长当时的解释是“他困了”，但这只是家长的转述，并未经过验证。推测部分：等待 5 秒有效，可能与三岁孩子处理双词指令需要约 4—6 秒有关，这一条没有独立测试支撑，只能算合理推测。</p>
+
+            <h3>把判断拆成可核对的四种情况</h3>
+            <ol class="check-list">
+              <li data-n="1">单条指令 + 等待 5 秒：配合率 59%，记录 32 次。</li>
+              <li data-n="2">单条指令 + 立即重复：配合率 34%，记录 41 次。</li>
+              <li data-n="3">两条以上指令一次给出：配合率 31%，记录 23 次。</li>
+              <li data-n="4">两条以上指令分次给出：配合率 64%，记录 19 次。</li>
+            </ol>
+            <p>这组数据的适用范围有限：只覆盖早晨出门与晚间收拾两个场景，午睡前后没有单独统计。可被反驳的地方也在这里——如果把“等待 5 秒”换成“等待 10 秒”，配合率是否继续上升，目前没有数据。另一个可能的解释是，分次给出指令时家长语气更平和，起作用的也许不是间隔，而是语气。</p>
+            <p class="caveat">统计口径：2026 年 10 月 15 日—11 月 6 日家庭记录，共 115 次指令场景，剔除孩子生病 6 天与外出旅行 3 天，有效样本 73 条。</p>
+          </article>
+        </section>
+
+        <!-- 体验指南 -->
+        <section class="section" id="guide">
+          <div class="section-head">
+            <h2>体验指南：第一次记录从哪儿开始</h2>
+            <span class="more">四步上手</span>
+          </div>
+          <div class="steps">
+            <div class="step" data-step="1">
+              <h3>先固定一个 10 分钟时段</h3>
+              <p>选孩子状态最稳的时段，多数家庭选早餐后。连续记 5 天，每天 10 分钟，比一次记两小时更容易坚持。</p>
+            </div>
+            <div class="step" data-step="2">
+              <h3>只记“说了什么 + 怎么回应”</h3>
+              <p>不必写感受。一句原话、一个动作、处理用了多久，这三样就够。10 月 28 日的穿衣记录就是这样成形的。</p>
+            </div>
+            <div class="step" data-step="3">
+              <h3>每 7 天翻一次同类场景</h3>
+              <p>把穿衣、吃饭、出门分开看。同类对比 4—5 条之后，会发现某个固定触发点，比如“赶时间”的时候冲突最多。</p>
+            </div>
+            <div class="step" data-step="4">
+              <h3>先改一个环节，别同时改三个</h3>
+              <p>11 月 1 日只调整了指令方式，其他照旧，一周后配合率变化才看得清。同时改三样，分不清是哪一项起了作用。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- FAQ -->
+        <section class="section" id="faq">
+          <div class="section-head">
+            <h2>常见问答</h2>
+            <span class="more">来自 128 条家长提问</span>
+          </div>
+          <div class="faq-wrap">
+            <details>
+              <summary>三岁孩子每天该睡多久，午睡还要不要保留？</summary>
+              <p>三岁孩子全天睡眠多数在 11—13 小时。夜间 10—11 小时，午睡 1—2 小时。10 月 28 日到 11 月 6 日的 9 天记录里，午睡超过 90 分钟的日子，晚上入睡时间平均推迟 34 分钟；午睡控制在 60 分钟内的 6 天，晚上 9 点前入睡的有 5 天。</p>
+            </details>
+            <details>
+              <summary>语言爆发期说话晚一点要不要紧？</summary>
+              <p>重点看“理解”而非“说出”。能听懂两步指令、能用手指认常见物品，多数属于正常差异。三岁前后词汇量差距可达数百个。11 月 5 日一条记录里，孩子能听懂“把杯子放桌上再拿勺子”，但自己只说两个词，两周后开始主动说短句。</p>
+            </details>
+            <details>
+              <summary>亲子游戏玩几分钟合适，孩子中途跑开怎么办？</summary>
+              <p>三岁孩子单个游戏的注意力多在 8—15 分钟。跑开不代表不喜欢，常常是玩够了。36 个游戏模板里，标注 10 分钟以内的有 21 个，按这个时长准备材料，收场时孩子哭闹的比例明显低。</p>
+            </details>
+            <details>
+              <summary>不肯刷牙能靠游戏解决吗？</summary>
+              <p>游戏能降低抵触，但解决不了所有情形。11 月 3 日新增的 9 条提问里，6 条提到“让玩偶先刷”有效，3 条无效，无效的都发生在孩子已经困了的晚上。刷牙时长按 2 分钟计，用沙漏比用口头数数更容易结束。</p>
+            </details>
+            <details>
+              <summary>三岁孩子说“我不要”时，讲道理有用吗？</summary>
+              <p>先处理当下的状态，再谈道理。10 月 31 日超市门口案例中，孩子在门口说“我不要回家”，先抱离现场、蹲下平视，情绪降到能对话再解释，全程 4 分 20 秒。当场讲道理的两次尝试，哭闹都延长到 7 分钟以上。</p>
+            </details>
+            <details>
+              <summary>绘本每天读几本，重复读同一本算不算浪费时间？</summary>
+              <p>重复是这一阶段的主要学习方式。2 岁半到 3 岁半，孩子反复听同一本，页数从 12 页到 28 页都正常。10 月 30 日至 11 月 5 日，同一本《小熊散步》连读 6 晚，第 4 晚开始，孩子能接出每页后半句。</p>
+            </details>
+          </div>
+        </section>
+
+        <!-- 用户评论 -->
+        <section class="section" id="comments">
+          <div class="section-head">
+            <h2>家长评论</h2>
+            <span class="more">近期 5 条</span>
+          </div>
+          <div class="comment-grid">
+            <div class="comment">
+              <div class="c-head">
+                <span class="avatar">林</span>
+                <div><div class="c-name">林朵妈</div><div class="c-time">11月7日</div></div>
+              </div>
+              <p><span class="c-subject">语言爆发期对话清单</span>里“你今天想先玩哪个”这句我试了两天，孩子真的会认真选，比问“要不要玩”有效。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head">
+                <span class="avatar">周</span>
+                <div><div class="c-name">周末带娃的老周</div><div class="c-time">11月6日</div></div>
+              </div>
+              <p>深度解析里那个 68% 和 31% 的对比，说得挺像回事，但只说早晨和晚上两个场景，我中午试就不灵。样本这事还是得说清楚。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head">
+                <span class="avatar">何</span>
+                <div><div class="c-name">何小满</div><div class="c-time">11月5日</div></div>
+              </div>
+              <p>“袜子配对”游戏 10 分钟收拾完，孩子自己把袜子塞回抽屉，这点比游戏本身更值。就是配对的花色太少，建议多给几个颜色例子。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head">
+                <span class="avatar">陈</span>
+                <div><div class="c-name">Chen 先森</div><div class="c-time">11月3日</div></div>
+              </div>
+              <p>刷牙那条不太同意。<span class="c-subject">11月3日的 9 条问答</span>里说玩偶有效，我家玩了三天就识破了，现在要真刷两分钟还是靠沙漏。</p>
+            </div>
+            <div class="comment">
+              <div class="c-head">
+                <span class="avatar">许</span>
+                <div><div class="c-name">许姐带俩</div><div class="c-time">11月1日</div></div>
+              </div>
+              <p>体验指南第二步“只记说了什么”很省事，比之前写一大段育儿日记轻松。十天下来翻了翻，发现我家孩子闹脾气基本都在饭前半小时。</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- 相关资讯 -->
+        <section class="section" id="news">
+          <div class="section-head">
+            <h2>相关资讯</h2>
+            <span class="more">示例条目</span>
+          </div>
+          <div class="news-list">
+            <div class="news-item"><span>11月7日 语言爆发期对话清单上线</span><time datetime="2026-11-07">11-07</time></div>
+            <div class="news-item"><span>11月6日 游戏模板新增收场提示</span><time datetime="2026-11-06">11-06</time></div>
+            <div class="news-item"><span>11月5日 睡前绘本选书差异修订</span><time datetime="2026-11-05">11-05</time></div>
+            <div class="news-item"><span>11月4日 家长记录删去催促类用语</span><time datetime="2026-11-04">11-04</time></div>
+            <div class="news-item"><span>11月3日 刷牙相关问答新增 9 条</span><time datetime="2026-11-03">11-03</time></div>
+            <div class="news-item"><span>10月31日 超市门口情绪案例完整时间线</span><time datetime="2026-10-31">10-31</time></div>
+            <div class="news-item"><span>10月29日 指令记录增加“等待 5 秒”标注</span><time datetime="2026-10-29">10-29</time></div>
+            <div class="news-item"><span>10月25日 连说三条指令对照场景记录</span><time datetime="2026-10-25">10-25</time></div>
+          </div>
+        </section>
+
+        <!-- 相关推荐 -->
+        <section class="section" id="related">
+          <div class="section-head">
+            <h2>相关推荐</h2>
+            <span class="more">按主题</span>
+          </div>
+          <div class="tag-cloud">
+            <a href="/#picks">三岁语言爆发期对话</a>
+            <a href="/#picks">亲子游戏模板居家版</a>
+            <a href="/#picks">孩子不肯刷牙怎么办</a>
+            <a href="/#picks">三岁孩子穿衣冲突</a>
+            <a href="/#picks">睡前绘本年龄段选书</a>
+            <a href="/#picks">超市门口情绪处理</a>
+            <a href="/#picks">午睡时长与晚上入睡</a>
+            <a href="/#picks">三岁如厕训练记录</a>
+            <a href="/#picks">周末两小时户外安排</a>
+            <a href="/#picks">积木拼图收纳方法</a>
+          </div>
+        </section>
+
+        <!-- 榜单 -->
+        <section class="section" id="rank">
+          <div class="section-head">
+            <h2>本周阅读榜</h2>
+            <span class="more">10月29日—11月7日</span>
+          </div>
+          <div class="rank-list">
+            <div class="rank-item">
+              <span class="num">1</span>
+              <div class="r-body"><h3>三岁语言爆发期对话清单</h3><p>40 句开放式提问 · 三个生活场景</p></div>
+              <span class="r-score">2.1k</span>
+            </div>
+            <div class="rank-item">
+              <span class="num">2</span>
+              <div class="r-body"><h3>孩子说“我不要”时先做哪三件事</h3><p>超市门口案例 · 4 分 20 秒完整动作</p></div>
+              <span class="r-score">1.7k</span>
+            </div>
+            <div class="rank-item">
+              <span class="num">3</span>
+              <div class="r-body"><h3>12个亲子游戏模板（居家版）</h3><p>材料简单 · 平均 12 分钟</p></div>
+              <span class="r-score">1.5k</span>
+            </div>
+            <div class="rank-item">
+              <span class="num">4</span>
+              <div class="r-body"><h3>睡前绘本怎么挑：三个年龄段差异</h3><p>注意力时长 4 分钟到 9 分钟的变化</p></div>
+              <span class="r-score">1.2k</span>
+            </div>
+            <div class="rank-item">
+              <span class="num">5</span>
+              <div class="r-body"><h3>三岁穿衣冲突的四个收尾方式</h3><p>17 次早晨拉锯的实际结果</p></div>
+              <span class="r-score">980</span>
+            </div>
+          </div>
+        </section>
+
+      </div>
+
+      <!-- 侧栏 -->
+      <aside class="side-col" aria-label="侧栏导航与热门内容">
+        <div class="side-card">
+          <h3>栏目导航</h3>
+          <nav class="side-nav" id="sideNav" aria-label="滚动导航">
+            <a href="/#overview">成长概览</a>
+            <a href="/#picks">精选内容推荐</a>
+            <a href="/#latest">最新更新</a>
+            <a href="/#channels">频道入口</a>
+            <a href="/#feature">深度解析</a>
+            <a href="/#guide">体验指南</a>
+            <a href="/#faq">常见问答</a>
+            <a href="/#comments">家长评论</a>
+            <a href="/#news">相关资讯</a>
+            <a href="/#related">相关推荐</a>
+            <a href="/#rank">本周阅读榜</a>
+          </nav>
+        </div>
+        <div class="side-card">
+          <h3>热门条目</h3>
+          <ul class="side-hot">
+            <li><span class="h-num">01</span><a href="/#picks">三岁语言爆发期对话清单</a></li>
+            <li><span class="h-num">02</span><a href="/#picks">不肯刷牙的两种处理路径</a></li>
+            <li><span class="h-num">03</span><a href="/#picks">积木游戏收场提示</a></li>
+            <li><span class="h-num">04</span><a href="/#picks">午睡 60 分钟的安排</a></li>
+            <li><span class="h-num">05</span><a href="/#picks">公园遮阴与设施对比</a></li>
+          </ul>
+        </div>
+        <div class="side-card">
+          <h3>数据说明</h3>
+          <p class="side-note">页面中的时间、配合率、记录条数均为示例数据，用于展示记录方法与判断方式，不代表普遍统计结论。图片来自 picsum.photos 占位图库。</p>
+        </div>
+      </aside>
+    </div>
+  </div>
+</main>
+
+<footer class="site-footer" id="footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-brand">
+        <svg viewBox="0 0 64 64" aria-hidden="true">
+          <circle cx="32" cy="32" r="30" fill="#d9708c"/>
+          <circle cx="22" cy="27" r="4.5" fill="#fff"/>
+          <circle cx="42" cy="27" r="4.5" fill="#fff"/>
+          <path d="M20 40c4 7 20 7 24 0" stroke="#fff" stroke-width="4" fill="none" stroke-linecap="round"/>
+        </svg>
+        <b>悠宝三岁美妙人生小姐姐网</b>
+      </div>
+      <p class="footer-desc">把三岁孩子的日常拆成能照着做的步骤，记录原话、动作与结果，供同样在带三岁孩子的家庭对照参考。</p>
+    </div>
+    <div class="footer-col">
+      <h4>成长频道</h4>
+      <ul>
+        <li><a href="/#channels">穿衣与自理</a></li>
+        <li><a href="/#channels">吃饭与挑食</a></li>
+        <li><a href="/#channels">语言启蒙</a></li>
+        <li><a href="/#channels">亲子游戏</a></li>
+        <li><a href="/#channels">绘本阅读</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>实用栏目</h4>
+      <ul>
+        <li><a href="/#faq">常见问答</a></li>
+        <li><a href="/#guide">体验指南</a></li>
+        <li><a href="/#feature">深度解析</a></li>
+        <li><a href="/#rank">本周阅读榜</a></li>
+        <li><a href="/#related">相关推荐</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>关于内容</h4>
+      <ul>
+        <li><a href="/#latest">更新记录</a></li>
+        <li><a href="/#comments">家长评论</a></li>
+        <li><a href="/#news">相关资讯</a></li>
+        <li><a href="/#overview">记录方法说明</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-meta">
+    <span>页面更新：2026年11月7日 · 对应正文“语言爆发期对话清单上线”与“游戏模板新增收场提示”两项更新</span>
+    <span>页面内条目、时间与比例为示例数据 · 版权归内容整理者所有</span>
+  </div>
+</footer>
+
+<button id="backTop" aria-label="回到顶部">↑</button>
+
+<script>
+(function(){
+  var menuToggle = document.getElementById('menuToggle');
+  var mainNav = document.getElementById('mainNav');
+  menuToggle.addEventListener('click', function(){
+    var open = mainNav.classList.toggle('open');
+    menuToggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  mainNav.addEventListener('click', function(e){
+    if(e.target.tagName === 'A' && window.innerWidth <= 720){
+      mainNav.classList.remove('open');
+      menuToggle.setAttribute('aria-expanded','false');
+    }
+  });
+
+  var searchInput = document.getElementById('siteSearch');
+  var searchBtn = document.getElementById('searchBtn');
+  var feedback = document.getElementById('searchFeedback');
+
+  function runSearch(){
+    var q = searchInput.value.trim();
+    if(!q){
+      feedback.innerHTML = '请输入关键词，例如“刷牙”“绘本”“语言”。';
+      feedback.classList.add('show');
+      return;
+    }
+    var nodes = document.querySelectorAll('.content-col h2, .content-col h3, .content-col summary, .content-col .tag-cloud a, .content-col .update-item, .content-col .card');
+    var hits = [];
+    nodes.forEach(function(n){
+      if(n.textContent.indexOf(q) > -1){
+        hits.push(n.textContent.trim().slice(0, 22));
+      }
+    });
+    if(hits.length === 0){
+      feedback.innerHTML = '没有找到与 <b>' + q.replace(/</g,'&lt;') + '</b> 相关的内容，换个更短的词试试，比如“游戏”“穿衣”。';
+    } else {
+      var list = hits.slice(0,3).map(function(t){return '· '+t;}).join('<br>');
+      feedback.innerHTML = '找到 <b>' + hits.length + '</b> 处相关：<br>' + list;
+    }
+    feedback.classList.add('show');
+  }
+  searchBtn.addEventListener('click', runSearch);
+  searchInput.addEventListener('keydown', function(e){
+    if(e.key === 'Enter'){ runSearch(); }
+  });
+  document.addEventListener('click', function(e){
+    if(!e.target.closest('.search-box')){ feedback.classList.remove('show'); }
+  });
+
+  var backTop = document.getElementById('backTop');
+  var sideLinks = Array.prototype.slice.call(document.querySelectorAll('#sideNav a'));
+  var sections = sideLinks.map(function(a){
+    var id = a.getAttribute('href').split('#')[1];
+    return document.getElementById(id);
+  }).filter(Boolean);
+
+  function onScroll(){
+    if(window.scrollY > 420){ backTop.classList.add('show'); }
+    else { backTop.classList.remove('show'); }
+
+    var pos = window.scrollY + 140;
+    var current = 0;
+    sections.forEach(function(sec, i){
+      if(sec && sec.offsetTop <= pos){ current = i; }
+    });
+    sideLinks.forEach(function(a, i){
+      a.classList.toggle('active', i === current);
+    });
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+})();
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "悠宝三岁美妙人生小姐姐网",
+  "description": "聚焦三岁幼儿成长记录与亲子生活分享，汇集日常影像整理、早教游戏、语言启蒙、绘本推荐与育儿问答。",
+  "inLanguage": "zh-CN"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "三岁孩子每天该睡多久，午睡还要不要保留？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三岁孩子全天睡眠多数在 11—13 小时。夜间 10—11 小时，午睡 1—2 小时。午睡超过 90 分钟的日子，晚上入睡时间平均推迟 34 分钟；午睡控制在 60 分钟内的日子，晚上 9 点前入睡的更常见。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "语言爆发期说话晚一点要不要紧？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "重点看理解而非说出。能听懂两步指令、能用手指认常见物品，多数属于正常差异。三岁前后词汇量差距可达数百个，先观察理解能力再判断是否需要咨询。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "亲子游戏玩几分钟合适，孩子中途跑开怎么办？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "三岁孩子单个游戏的注意力多在 8—15 分钟。跑开常常是玩够了，不代表不喜欢。按 10 分钟以内准备材料并提前给出收场提示，收场时哭闹比例更低。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "不肯刷牙能靠游戏解决吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "游戏能降低抵触，但解决不了所有情形。让玩偶先刷在部分家庭有效，孩子已经困了的晚上往往无效。刷牙时长按 2 分钟计，用沙漏比口头数数更容易结束。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "三岁孩子说“我不要”时，讲道理有用吗？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "先处理当下状态再谈道理。超市门口案例中，先抱离现场、蹲下平视，情绪降到能对话再解释，全程 4 分 20 秒；当场讲道理的尝试往往把哭闹延长到 7 分钟以上。"
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "绘本每天读几本，重复读同一本算不算浪费时间？",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "重复是这一阶段的主要学习方式。两岁半到三岁半的孩子反复听同一本很常见，同一本连读 6 晚后，孩子往往能接出每页后半句。"
+      }
+    }
+  ]
+}
+</script>
+</body>
+          </html>
